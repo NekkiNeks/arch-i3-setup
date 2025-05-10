@@ -1,0 +1,88 @@
+# -- Definitions --
+
+# pactl pulseaudio
+set $refresh_i3status killall -SIGUSR1 i3status
+
+# directions
+set $up k
+set $down j
+set $left h
+set $right l
+
+# MOD keys
+set $alt Mod1
+set $mod Mod4
+
+# Define names for default workspaces for which we configure key bindings later on.
+# We use variables to avoid repeating the names in multiple places.
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+# Run app in floating terminal
+set $term_float alacritty --class floating_shell -o window.dimensions.columns=82 -o window.dimensions.lines=25 -e
+
+# Connect all modules
+include ~/.config/i3/config.d/*.conf
+
+# Load GTK theme variables
+exec --no-startup-id ~/.config/i3/theme.sh
+
+# style
+#set $gtk-theme Matcha-dark-aliz
+#set $icon-theme Papirus-Dark-Maia
+#set $cursor-theme xcursor-breeze
+#set $gui-font Roboto 11
+#set $term-font JetBrainsMono NF
+#set $gtk-color-scheme prefer-dark
+#set $kvantum-theme Matcha-Dark-Aliz
+
+set_from_resource $color0 color0
+set_from_resource $color1 color1
+set_from_resource $color2 color2
+set_from_resource $color3 color3
+set_from_resource $color4 color4
+set_from_resource $color5 color5
+set_from_resource $color6 color6
+set_from_resource $color7 color7
+set_from_resource $color8 color8
+set_from_resource $color9 color9
+set_from_resource $color10 color10
+set_from_resource $color11 color11
+set_from_resource $color12 color12
+set_from_resource $color13 color13
+set_from_resource $color14 color14
+set_from_resource $color15 color15
+
+
+set_from_resource $bg_color background
+set_from_resource $fg_color foreground
+set_from_resource $sel_color $color1
+set_from_resource $main_color $color9
+
+
+# i3 config file (v4)
+#
+# use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# move tiling windows via drag & drop by left-clicking into the title bar,
+# or left-clicking anywhere into the window while holding the floating modifier.
+tiling_drag modifier titlebar
+
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+# bar {
+#        status_command i3status
+# }
+
+# Start polybar
+exec_always --no-startup-id ~/.config/polybar/scripts/launch.sh
+

@@ -1,0 +1,12 @@
+# GIMP gimp-crop-tool options
+
+(aspect-denominator 9)
+(aspect-numerator 16)
+(fixed-rule-active yes)
+(overridden-fixed-aspect yes)
+(foreground
+    (color "HSVA float" 16 "\0\0\0\0\0\0\0\0\11\67\303\75\0\0\200\77" 0))
+(pattern "Starfield")
+(allow-growing yes)
+
+# end of gimp-crop-tool options

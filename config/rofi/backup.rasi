@@ -1,0 +1,16 @@
+configuration {
+font: "terminus 8";
+show-icons: false;
+drun-display-format: "> {name}";
+}
+
+* {
+lightbg: #222222;
+background: #222222;
+lightfg: #e44138;
+foreground: #eeeeee;
+}
+
+window {
+width: 40em;
+}
