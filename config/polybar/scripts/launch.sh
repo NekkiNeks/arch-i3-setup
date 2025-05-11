@@ -14,4 +14,4 @@ eval "$(
 
 
 # Запускаем polybar
-polybar example &
+polybar default &

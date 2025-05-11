@@ -1,0 +1,2 @@
+#!/bin/bash
+alacritty --class floating_shell -o window.dimensions.columns=80 -o window.dimensions.lines=30 -e "$@"
