@@ -29,3 +29,4 @@ gimp
 visual-studio-code-bin
 obsidian
 postman
+vim
