@@ -15,3 +15,13 @@ y = 10
   magenta = "#85678f"
   cyan    = "#5e8d87"
   white   = "#707880"
+
+[colors.bright]
+  black   = "#373b41"
+  red     = "#ff4747"
+  green   = "#b5bd68"
+  yellow  = "#f0c674"
+  blue    = "#81a2be"
+  magenta = "#b294bb"
+  cyan    = "#8abeb7"
+  white   = "#c5c8c6"

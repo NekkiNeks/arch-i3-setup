@@ -5,10 +5,10 @@ drun-display-format: "> {name}";
 }
 
 * {
-lightbg: #222222;
-background: #222222;
-lightfg: #e44138;
-foreground: #eeeeee;
+lightbg: #1d1f21;
+background: #1d1f21;
+lightfg: #ff4747;
+foreground: #cccccc;
 }
 
 window {

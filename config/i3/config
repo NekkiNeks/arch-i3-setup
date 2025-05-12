@@ -29,6 +29,9 @@ set $ws10 "10"
 # Run app in floating terminal
 set $term_float alacritty --class floating_shell -o window.dimensions.columns=82 -o window.dimensions.lines=25 -e
 
+# Run app in terminal
+set $term alacritty -e
+
 # Connect all modules
 include ~/.config/i3/config.d/*.conf
 
