@@ -30,3 +30,4 @@ visual-studio-code-bin
 obsidian
 postman
 vim
+scrot

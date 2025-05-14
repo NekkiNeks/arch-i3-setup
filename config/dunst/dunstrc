@@ -1,0 +1,85 @@
+# For defaults and description of each option, see the link bellow
+# https://github.com/dunst-project/dunst/blob/master/dunstrc
+
+[global]
+
+# Define the title of the windows spawned by dunst (X11 only)
+title = Dunst
+
+# Define the class of the windows spawned by dunst (X11 only)
+class = Dunst
+
+# Display
+# follow = mouse
+width = 350
+height = (0, 300)
+origin = top-right
+offset = (15, 40)
+indicate_hidden = yes
+notification_limit = 5
+gap_size = 12
+padding = 12
+horizontal_padding = 20
+frame_width = 1
+sort = no
+
+# Progress bar
+progress_bar_frame_width = 0
+progress_bar_corner_radius = 3
+
+# Colors
+foreground = "#cccccc"
+frame_color = "#bb4040"
+highlight = "#ff4747, #de935f"
+
+# Text
+font = "Symbols Nerd Font, Terminus 10"
+markup = full
+format = "<span rise="2000" font="Symbols Nerd Font 9"> </span> <span font="Terminus 13"><b>%s</b></span> \n\n <span font="Terminus 11">%b </span>"
+alignment = left
+vertical_alignment = center
+show_age_threshold = -1
+hide_duplicate_count = false
+
+# Icon
+icon_position = left
+min_icon_size = 54
+max_icon_size = 80
+icon_path = /usr/share/icons/Arc/status/96:/usr/share/icons/Arc/status/symbolic
+icon_corner_radius = 4
+
+# Misc/Advanced
+dmenu = rofi --show drun --prompt 'Open with'
+-- corner_radius = 10
+
+# Mouse
+mouse_left_click = do_action, close_current
+mouse_right_click = close_current
+
+[urgency_low]
+background = ""
+frame_color = "#bb4040"
+timeout = 3
+
+[urgency_normal]
+background = "#1d1f21"
+frame_color = "#bb4040"
+timeout = 8
+
+[urgency_critical]
+background = "#1d1f21"
+frame_color = "#bb4040"
+highlight = "#5e8d87"
+timeout = 0
+
+# Rules
+[fullscreen_delay_everything]
+fullscreen = delay
+
+[fullscreen_show_critical]
+msg_urgency = critical
+fullscreen = show
+
+[play_sound]
+summary = "*"
+script = ~/.config/dunst/scripts/sound.sh

@@ -18,3 +18,6 @@ $HOME/.config/i3/scripts/alacritty-load-template.sh
 
 # Обновляем конфиг rofi на основе template с использованием переменных окружения
 $HOME/.config/i3/scripts/rofi-load-template.sh
+
+# Обновляем конфиг dunst на основе template с использованием переменных окружения
+$HOME/.config/i3/scripts/dunst-load-template.sh
