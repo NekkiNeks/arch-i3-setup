@@ -31,3 +31,7 @@ obsidian
 postman
 vim
 scrot
+docker
+docker-compose
+clipmenud
+lazygit

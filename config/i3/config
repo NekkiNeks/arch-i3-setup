@@ -1,5 +1,8 @@
 # -- Definitions --
 
+# monitors setup
+exec_always --no-startup-id xrandr --output DP-2 --mode 1920x1080 --pos 0x0 --output HDMI-0 --mode 1920x1080 --pos 1920x0 --output DP-4 --mode 1920x1080 --same-as HDMI-0
+
 # pactl pulseaudio
 set $refresh_i3status killall -SIGUSR1 i3status
 

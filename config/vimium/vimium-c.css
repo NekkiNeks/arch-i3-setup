@@ -1,0 +1,113 @@
+/* #ui */
+
+.HUD,
+.HUD::after {
+  background: #1d1f21 !important;
+  color: #cccccc !important;
+  border: 1px solid #373b41 !important;
+  border-radius: 0 !important;
+  font-family: Terminus, "JetBrains Mono", monospace !important;
+  font-size: 13px !important;
+}
+
+/* Hint labels */
+.LH,
+.D > .LH {
+  background: #1d1f21 !important;   
+  color: #ff4747 !important;        
+  border: 1px solid #bb4040 !important;
+  border-radius: 3px !important;
+  font-family: Terminus, "JetBrains Mono", monospace !important;
+  min-width: 20px;
+  text-align: center;
+}
+
+
+/* #omni */
+
+#bar {
+  background: #1d1f21 !important;
+  border: 1px solid #373b41 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  font-family: Terminus, "JetBrains Mono", monospace !important;
+}
+
+#input,
+#input * {
+  background: #1d1f21 !important;
+  color: #cccccc !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  font-family: Terminus, "JetBrains Mono", monospace !important;
+  font-size: 13px !important;
+}
+
+#list {
+  background: #1d1f21 !important;
+  font-family: Terminus, "JetBrains Mono", monospace !important;
+}
+
+.item {
+  background: #1d1f21 !important;
+  border-bottom: 1px solid #373b41 !important;
+  border-radius: 0 !important;
+  color: #cccccc !important;
+  font-family: Terminus, "JetBrains Mono", monospace !important;
+}
+
+.item:hover {
+  background: #2a2c2f !important;
+}
+
+.item.s {
+  background: #ff4747 !important;
+  color: #1d1f21 !important;
+  border-radius: 0 !important;
+}
+
+.top,
+.title {
+  color: #ff4747 !important;
+  font-size: 13px !important;
+  font-family: Terminus, "JetBrains Mono", monospace !important;
+}
+
+.bottom,
+.bottom a {
+  color: #cccccc !important;
+  font-size: 13px !important;
+  font-family: Terminus, "JetBrains Mono", monospace !important;
+}
+
+match {
+  color: #ff4747 !important;
+  font-weight: bold !important;
+  font-family: Terminus, "JetBrains Mono", monospace !important;
+}
+
+/* #find */
+
+#find,
+#find * {
+  font-family: Terminus, "JetBrains Mono", monospace !important;
+  font-size: 14px !important;
+  border-radius: 0 !important;
+}
+
+/* #find:host */
+
+:host,
+:host * {
+  font-family: Terminus, "JetBrains Mono", monospace !important;
+  font-size: 14px !important;
+  border-radius: 0 !important;
+}
+
+/* #find:selection */
+
+::selection {
+  background: #1d1f21 !important;
+  color: #ff4747 !important;
+}
