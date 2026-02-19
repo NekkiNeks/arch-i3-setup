@@ -37,8 +37,8 @@ mkdir -p "$WALL_DEST"
 rsync -av "$THEME_DIR/wallpapers/" "$WALL_DEST/"
 
 # переменные окружения для template.cfg
-export WALL1="$WALL_DEST/wallpaper_1.png"
-export WALL2="$WALL_DEST/wallpaper_2.png"
+export WALL1="$WALL_DEST/wallpaper_1.jpg"
+export WALL2="$WALL_DEST/wallpaper_2.jpg"
 
 # генерируем bg-saved.cfg из template
 envsubst < "$THEME_DIR/config/nitrogen/template.cfg" \

@@ -51,8 +51,8 @@ if [ -f ~/.config/polybar/config.ini ]; then
 fi
 
 # nitrogen template берём из default
-cp "$BASE/default/config/nitrogen/template.cfg" \
-   "$NEW/config/nitrogen/template.cfg"
+cp "$BASE_DIR/default/config/nitrogen/template.cfg" \
+   "$NEW_THEME_DIR/config/nitrogen/template.cfg"
 
 # -------------------------
 # templates

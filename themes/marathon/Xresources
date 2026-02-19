@@ -1,0 +1,44 @@
+! Colors
+!
+! special
+*.foreground:   #eaeaea
+*.background:   #000000
+*.cursorColor:  #eaeaea
+
+! black
+*.color0:       #232323
+*.color8:       #4d4d4d
+
+! red
+*.color1:       #b30303
+*.color9:       #ff0100
+
+! green
+*.color2:       #8ab800
+*.color10:      #baf602
+
+! yellow
+*.color3:       #dc4904
+*.color11:      #fd6c13
+
+! blue
+*.color4:       #2527ce
+*.color12:      #2e31fc
+
+! magenta
+*.color5:       #b20b6d
+*.color13:      #f01294
+
+! cyan
+*.color6:       #277890
+*.color14:      #3bb1d4
+
+! white
+*.color7:       #afafaf
+*.color15:      #d6d6d6
+
+
+! Other
+Xcursor.theme: Apple-cursors
+Xcursor.size: 20
+
