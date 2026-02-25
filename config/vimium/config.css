@@ -1,17 +1,17 @@
 /* #ui */
 
 /* VARIABLES
-accent - ${color10}
-background - ${background}
-background-hover - ${color8}
-text-color - ${foreground}
-border- ${color8}
+accent - #c2fe0b
+background - #0d0d0d
+background-hover - #2a2a2a
+text-color - #aeaeae
 */
 
 .HUD,
 .HUD::after {
-  background: ${background} !important;
-  color: ${foreground} !important;
+  background: #0d0d0d !important;
+  color: #aeaeae !important;
+  border: 1px solid #aa22ee !important;
   border-radius: 0 !important;
   font-size: 12px !important;
   font-family: "Terminus (TTF) for Windows", monospace !important;
@@ -20,9 +20,9 @@ border- ${color8}
 /* Hint labels */
 .LH,
 .D > .LH {
-  background: ${background} !important;   
-  color: ${color10} !important;        
-  border: 1px solid ${color10};
+  background: #0d0d0d !important;   
+  color: #c2fe0b !important;
+  border: 1px solid #c2fe0b;
   min-width: 20px;
   text-align: center;
   font-family: "Terminus (TTF) for Windows", monospace !important;
@@ -32,8 +32,8 @@ border- ${color8}
 /* #omni */
 
 #bar {
-  background: ${background} !important;
-  border: 1px solid ${color8} !important;
+  background: #0d0d0d !important;
+  border: 1px solid #4b4b4b !important;
   border-radius: 0 !important;
   box-shadow: none !important;
   font-family: "Terminus (TTF) for Windows", monospace !important;
@@ -41,8 +41,8 @@ border- ${color8}
 
 #input,
 #input * {
-  background: ${background} !important;
-  color: ${foreground} !important;
+  background: #0d0d0d !important;
+  color: #aeaeae !important;
   border: none !important;
   border-radius: 0 !important;
   box-shadow: none !important;
@@ -51,32 +51,32 @@ border- ${color8}
 }
 
 #list {
-  background: ${background} !important;
+  background: #0d0d0d !important;
   font-family: "Terminus (TTF) for Windows", monospace !important;
 }
 
 .item {
-  background: ${background} !important;
-  border-bottom: 1px solid ${color8} !important;
+  background: #0d0d0d !important;
+  border-bottom: 1px solid #4b4b4b !important;
   border-radius: 0 !important;
-  color: ${foreground} !important;
+  color: #aeaeae !important;
   font-family: "Terminus (TTF) for Windows", monospace !important;
 }
 
 .item:hover {
-  background: ${color8} !important;
+  background: #2a2a2a !important;
 }
 
 .item.s {
-  background: ${color10} !important;
-  color: ${foreground} !important;
+  background: #c2fe0b !important;
+  color: #aeaeae !important;
   border-radius: 0 !important;
   font-family: "Terminus (TTF) for Windows", monospace !important;
 }
 
 .top,
 .title {
-  color: ${color10} !important;
+  color: #c2fe0b !important;
   font-size: 12px !important;
   font-family: "Terminus (TTF) for Windows", monospace !important;
 }
@@ -92,13 +92,13 @@ border- ${color8}
 
 .bottom,
 .bottom a {
-  color: ${foreground} !important;
+  color: #aeaeae !important;
   font-size: 12px !important;
   font-family: "Terminus (TTF) for Windows", monospace !important;
 }
 
 match {
-  color: ${color10} !important;
+  color: #c2fe0b !important;
   font-weight: bold !important;
   font-family: "Terminus (TTF) for Windows", monospace !important;
 }
@@ -124,7 +124,7 @@ match {
 /* #find:selection */
 
 ::selection {
-  background: ${background} !important;
-  color: ${color10} !important;
+  background: #0d0d0d !important;
+  color: #c2fe0b !important;
   font-family: "Terminus (TTF) for Windows", monospace !important;
 }

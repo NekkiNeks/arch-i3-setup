@@ -58,6 +58,11 @@ sudo systemctl disable gdm lightdm sddm
 sudo systemctl enable ly
 echo "Установка экрана логина ly выполнена успешно..."
 
+# Выполнение всех setup файлов в папке setups
+for f in ./setups/*; do
+    [ -x "$f" ] && "$f"
+done
+
 xrdb -merge ~/.Xresources
 
 

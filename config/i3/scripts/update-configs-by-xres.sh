@@ -14,10 +14,10 @@ fi
 source $HOME/.config/i3/scripts/load-xres-env.sh
 
 # Обновляем конфиг alacritty на основе template с использованием переменных окружения
-$HOME/.config/i3/scripts/alacritty-load-template.sh
+$HOME/.config/alacritty/apply-template.sh
 
 # Обновляем конфиг rofi на основе template с использованием переменных окружения
-$HOME/.config/i3/scripts/rofi-load-template.sh
+$HOME/.config/rofi/apply-template.sh
 
 # Обновляем конфиг dunst на основе template с использованием переменных окружения
-$HOME/.config/i3/scripts/dunst-load-template.sh
+$HOME/.config/dunst/apply-template.sh

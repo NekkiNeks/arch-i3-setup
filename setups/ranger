@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# Установка необходимых компонентов для включения превью изображений
+ranger --copy-config=scope
+chmod +x ~/.config/ranger/scope.sh
