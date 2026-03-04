@@ -1,0 +1,22 @@
+#!/bin/bash
+set -e
+
+# Устанавливаем зависимости
+sudo pacman -Syu --noconfirm git base-devel glib2 taglib fftw opusfile \
+opus libvorbis libogg chafa
+
+# Клонируем репозиторий kew и собираем
+git clone https://github.com/ravachol/kew.git
+cd kew
+make
+sudo make install
+cd ..
+
+# Копируем .desktop файл из ../other/ в локальные приложения
+mkdir -p "$HOME/.local/share/applications"
+cp ../other/kew.desktop "$HOME/.local/share/applications/"
+
+# Обновляем кэш приложений
+update-desktop-database "$HOME/.local/share/applications"
+
+echo "Kew установлен, .desktop файл добавлен для Rofi."

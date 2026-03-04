@@ -1,0 +1,129 @@
+/* #ui */
+
+/* VARIABLES
+accent - #c2fe0b
+background - #0d0d0d
+background-hover - #2a2a2a
+text-color - #aeaeae
+*/
+
+.HUD,
+.HUD::after {
+  background: #0d0d0d !important;
+  color: #aeaeae !important;
+  border-radius: 0 !important;
+  font-size: 12px !important;
+  font-family: "Terminus (TTF) for Windows", monospace !important;
+}
+
+/* Hint labels */
+.LH,
+.D > .LH {
+  background: #0d0d0d !important;   
+  color: #c2fe0b !important;        
+  min-width: 20px;
+  border: 1px solid #c2fe0b;
+  text-align: center;
+  font-family: "Terminus (TTF) for Windows", monospace !important;
+}
+
+
+/* #omni */
+
+#bar {
+  background: #0d0d0d !important;
+  border: 1px solid #4b4b4b !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  font-family: "Terminus (TTF) for Windows", monospace !important;
+}
+
+#input,
+#input * {
+  background: #0d0d0d !important;
+  color: #aeaeae !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  font-size: 12px !important;
+  font-family: "Terminus (TTF) for Windows", monospace !important;
+}
+
+#list {
+  background: #0d0d0d !important;
+  font-family: "Terminus (TTF) for Windows", monospace !important;
+}
+
+.item {
+  background: #0d0d0d !important;
+  border-bottom: 1px solid #4b4b4b !important;
+  border-radius: 0 !important;
+  color: #aeaeae !important;
+  font-family: "Terminus (TTF) for Windows", monospace !important;
+}
+
+.item:hover {
+  background: #2a2a2a !important;
+}
+
+.item.s {
+  background: #c2fe0b !important;
+  color: #aeaeae !important;
+  border-radius: 0 !important;
+  font-family: "Terminus (TTF) for Windows", monospace !important;
+}
+
+.top,
+.title {
+  color: #c2fe0b !important;
+  font-size: 12px !important;
+  font-family: "Terminus (TTF) for Windows", monospace !important;
+}
+
+.top
+.icon {
+  display: none;
+}
+
+.bottom {
+  margin-left: 0;
+}
+
+.bottom,
+.bottom a {
+  color: #aeaeae !important;
+  font-size: 12px !important;
+  font-family: "Terminus (TTF) for Windows", monospace !important;
+}
+
+match {
+  color: #c2fe0b !important;
+  font-weight: bold !important;
+  font-family: "Terminus (TTF) for Windows", monospace !important;
+}
+
+/* #find */
+
+#find,
+#find * {
+  font-size: 12px !important;
+  border-radius: 0 !important;
+  font-family: "Terminus (TTF) for Windows", monospace !important;
+}
+
+/* #find:host */
+
+:host,
+:host * {
+  font-size: 12px !important;
+  border-radius: 0 !important;
+  font-family: "Terminus (TTF) for Windows", monospace !important;
+}
+
+/* #find:selection */
+
+::selection {
+  background: #0d0d0d !important;
+  color: #c2fe0b !important;
+  font-family: "Terminus (TTF) for Windows", monospace !important;
+}

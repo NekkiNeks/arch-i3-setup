@@ -1,0 +1,130 @@
+/* #ui */
+
+/* VARIABLES
+accent - ${color9}
+background - ${background}
+background-hover - ${color8}
+text-color - ${foreground}
+border- ${color8}
+*/
+
+.HUD,
+.HUD::after {
+  background: ${background} !important;
+  color: ${foreground} !important;
+  border-radius: 0 !important;
+  font-size: 12px !important;
+  font-family: "Terminus", monospace !important;
+}
+
+/* Hint labels */
+.LH,
+.D > .LH {
+  background: ${background} !important;   
+  color: ${color9} !important;        
+  border: 1px solid ${color9};
+  min-width: 20px;
+  text-align: center;
+  font-family: "Terminus", monospace !important;
+}
+
+
+/* #omni */
+
+#bar {
+  background: ${background} !important;
+  border: 1px solid ${color8} !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  font-family: "Terminus", monospace !important;
+}
+
+#input,
+#input * {
+  background: ${background} !important;
+  color: ${foreground} !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  font-size: 12px !important;
+  font-family: "Terminus", monospace !important;
+}
+
+#list {
+  background: ${background} !important;
+  font-family: "Terminus", monospace !important;
+}
+
+.item {
+  background: ${background} !important;
+  border-bottom: 1px solid ${color8} !important;
+  border-radius: 0 !important;
+  color: ${foreground} !important;
+  font-family: "Terminus", monospace !important;
+}
+
+.item:hover {
+  background: ${color8} !important;
+}
+
+.item.s {
+  background: ${color9} !important;
+  color: ${foreground} !important;
+  border-radius: 0 !important;
+  font-family: "Terminus", monospace !important;
+}
+
+.top,
+.title {
+  color: ${color9} !important;
+  font-size: 12px !important;
+  font-family: "Terminus", monospace !important;
+}
+
+.top
+.icon {
+  display: none;
+}
+
+.bottom {
+  margin-left: 0;
+}
+
+.bottom,
+.bottom a {
+  color: ${foreground} !important;
+  font-size: 12px !important;
+  font-family: "Terminus", monospace !important;
+}
+
+match {
+  color: ${color9} !important;
+  font-weight: bold !important;
+  font-family: "Terminus", monospace !important;
+}
+
+/* #find */
+
+#find,
+#find * {
+  font-size: 12px !important;
+  border-radius: 0 !important;
+  font-family: "Terminus", monospace !important;
+}
+
+/* #find:host */
+
+:host,
+:host * {
+  font-size: 12px !important;
+  border-radius: 0 !important;
+  font-family: "Terminus", monospace !important;
+}
+
+/* #find:selection */
+
+::selection {
+  background: ${background} !important;
+  color: ${color9} !important;
+  font-family: "Terminus", monospace !important;
+}

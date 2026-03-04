@@ -1,0 +1,22 @@
+header,
+html,
+html[style*="#171B25"],
+html[style*="#171b25"] {
+  background: #0d0d0d !important;
+}
+
+header {
+  border-bottom: 1px solid #4b4b4b !important
+}
+
+/* на случай, если цвет добавляется через style-тег mitigation */
+.theme-flash-mitigation html {
+  background: #0d0d0d !important;
+}
+
+/* иногда фон дублируется на body */
+body {
+  background: #0d0d0d !important;
+}
+
+

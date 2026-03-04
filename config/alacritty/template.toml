@@ -2,6 +2,13 @@
 x = 10
 y = 10
 
+[font]
+size = 8
+
+[font.normal]
+  family = "terminus"
+  style = "Regular"
+
 [colors.primary]
   background = "${background}"
   foreground = "${foreground}"
