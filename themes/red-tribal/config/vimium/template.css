@@ -74,6 +74,13 @@ border- ${color8}
   font-family: "Terminus", monospace !important;
 }
 
+/*Заголовки для выбранного item*/
+.item.s .top,
+.item.s .title {
+    color: ${background} !important;
+}
+
+
 .top,
 .title {
   color: ${color9} !important;
