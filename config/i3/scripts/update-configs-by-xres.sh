@@ -21,3 +21,6 @@ $HOME/.config/rofi/apply-template.sh
 
 # Обновляем конфиг dunst на основе template с использованием переменных окружения
 $HOME/.config/dunst/apply-template.sh
+
+# Обновляем конфиг gtt на основе template с использованием переменных окружения
+$HOME/.config/gtt/apply-template.sh

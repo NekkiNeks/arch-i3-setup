@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Получаем имя пользователя (если не передано — берем текущего)
+if [ -n "$1" ]; then
+    USERNAME="$1"
+else
+    USERNAME="$(whoami)"
+fi
+
+RULE_FILE="49-ly-restart.rules"
+TMP_FILE="/tmp/$RULE_FILE"
+DEST_FILE="/etc/polkit-1/rules.d/$RULE_FILE"
+
+cat > "$TMP_FILE" <<EOF
+polkit.addRule(function(action, subject) {
+    if (action.id == "org.freedesktop.systemd1.manage-units" &&
+        action.lookup("unit") == "ly@tty2.service" &&
+        action.lookup("verb") == "restart" &&
+        subject.user == "$USERNAME") {
+        return polkit.Result.YES;
+    }
+});
+EOF
+
+echo "Создан файл правила для пользователя: $USERNAME"
+
+# Перемещение с правами root
+sudo mv "$TMP_FILE" "$DEST_FILE"
+sudo chmod 644 "$DEST_FILE"
+
+echo "Правило установлено: $DEST_FILE"
