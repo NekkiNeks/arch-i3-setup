@@ -14,20 +14,19 @@ vim.keymap.set({ 'n', 'i', 'v' }, "<leader>w", utils.save_file, { desc = "Only S
 vim.keymap.set({ 'n', 'i', 'v' }, "<leader>ц", utils.save_file, { desc = "Only Save (RU)" })
 
 -- Открыть/закрыть дерево nvim-tree
-vim.api.nvim_set_keymap('n', '<leader>t', ':NvimTreeToggle<CR>', opts)
-vim.api.nvim_set_keymap('n', '<leader>е', ':NvimTreeToggle<CR>', opts)
+vim.keymap.set('n', '<leader>t', ':NvimTreeToggle<CR>', opts)
+vim.keymap.set('n', '<leader>е', ':NvimTreeToggle<CR>', opts)
 
--- Взаимодействие с Telescope
-vim.api.nvim_set_keymap('n', '<leader>ff', ':Telescope find_files<CR>', opts)
-vim.api.nvim_set_keymap('n', '<leader>fg', ':Telescope live_grep<CR>', opts)
-vim.api.nvim_set_keymap('n', '<leader>fb', ':Telescope buffers<CR>', opts)
-vim.api.nvim_set_keymap('n', '<leader>fh', ':Telescope help_tags<CR>', opts)
+-- Взаимодействие с Telescope, ':Telescope find_files<CR>', opts)
+vim.keymap.set('n', '<leader>fg', ':Telescope live_grep<CR>', opts)
+vim.keymap.set('n', '<leader>fb', ':Telescope buffers<CR>', opts)
+vim.keymap.set('n', '<leader>fh', ':Telescope help_tags<CR>', opts)
 
 -- Биндинги для комбинаций с Ctrl
 -- Ctrl+в → Ctrl+d
-vim.api.nvim_set_keymap('n', '<C-в>', '<C-d>', opts)
+vim.keymap.set({ 'n', 'i', 'v' }, '<C-в>', '<C-d>', opts)
 -- Ctrl+г → Ctrl+u
-vim.api.nvim_set_keymap('n', '<C-г>', '<C-u>', opts)
+vim.keymap.set({ 'n', 'i', 'v' }, '<C-г>', '<C-u>', opts)
 
 -- Предложенное ChatGPT (Проверить) --
 
@@ -54,6 +53,19 @@ vim.keymap.set('n', '<leader>]', function() utils.jump_diagnostic(1) end, { desc
 vim.keymap.set('n', '<leader>[', function() utils.jump_diagnostic(-1) end, { desc = "Prev Diagnostic" })
 vim.keymap.set('n', '<leader>ъ', function() utils.jump_diagnostic(1) end, { desc = "Next Diagnostic (RU)" })
 vim.keymap.set('n', '<leader>х', function() utils.jump_diagnostic(-1) end, { desc = "Prev Diagnostic (RU)" })
+
+-- Управление вкладками bufferline
+-- Переместиться влево
+vim.keymap.set('n', 'H', ':BufferLineCyclePrev<CR>', { desc = 'Prev buffer' })
+vim.keymap.set('n', 'Р', ':BufferLineCyclePrev<CR>', { desc = 'Prev buffer' })
+
+-- Переместиться вправо
+vim.keymap.set('n', 'L', ':BufferLineCycleNext<CR>', { desc = 'Next buffer' })
+vim.keymap.set('n', 'Д', ':BufferLineCycleNext<CR>', { desc = 'Next buffer' })
+
+-- Закрыть вкладку
+vim.keymap.set('n', '<Leader>o', utils.close_buffer_safely, { desc = 'Close buffer' })
+vim.keymap.set('n', '<Leader>щ', utils.close_buffer_safely, { desc = 'Close buffer' })
 
 
 -- Глобальный костыль для закрытия любых плавающих окон на 'й'

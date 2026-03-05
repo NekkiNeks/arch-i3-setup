@@ -125,5 +125,11 @@ packer.startup(function(use)
         config = function() require("plugins.conform") end,
     }
 
+    -- [BUFFERLINE]
+    -- Вкладки с открытыми файлами
+    use {
+        'akinsho/bufferline.nvim',
+        config = function() require("plugins.bufferline") end,
+    }
     -- Можно добавить сюда другие плагины
 end)

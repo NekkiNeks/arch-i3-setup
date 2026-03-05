@@ -67,3 +67,13 @@ set_colors()
 vim.api.nvim_create_autocmd("ColorScheme", {
     callback = set_colors
 })
+
+-- Настройки для курсора в nvim-tree
+-- Включаем визуальную линию
+vim.opt.cursorline = true
+
+-- Настройка цветов для режима без termguicolors
+-- 8  - обычно серый, 7 - белый, 0 - черный и т.д.
+-- Попробуйте разные числа от 1 до 255, чтобы подобрать под ваш терминал
+vim.cmd('highlight NvimTreeCursorLine ctermbg=8 cterm=bold')
+vim.cmd('highlight CursorLine ctermbg=0')

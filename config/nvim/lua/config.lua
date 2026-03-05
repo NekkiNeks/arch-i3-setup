@@ -40,6 +40,7 @@ vim.api.nvim_create_autocmd({ "InsertLeave", "BufLeave" }, {
 
 -- Предложенное ChatGPT (Проверить) --
 
+
 --  Отображение ошибок на строке (Virtual Text)
 vim.diagnostic.config({
     -- virtual_text = {
@@ -58,3 +59,23 @@ vim.diagnostic.config({
         severity_sort = true,
     },
 })
+
+-- -- Включение и выключение курсорной строки
+-- local nvim_tree_group = vim.api.nvim_create_augroup("NvimTreeCursorLine", { clear = true })
+-- vim.api.nvim_create_autocmd("FileType", {
+--     group = nvim_tree_group,
+--     pattern = "NvimTree",
+--     callback = function()
+--         vim.opt_local.cursorline = true
+--     end,
+-- })
+--
+-- -- Опционально: если хотите, чтобы в обычных файлах её точно НЕ БЫЛО
+-- vim.api.nvim_create_autocmd("BufEnter", {
+--     group = nvim_tree_group,
+--     callback = function()
+--         if vim.bo.filetype ~= "NvimTree" then
+--             vim.opt_local.cursorline = false
+--         end
+--     end,
+-- })

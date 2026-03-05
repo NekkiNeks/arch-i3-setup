@@ -1,5 +1,6 @@
 require("nvim-tree").setup({
-    -- ... твои настройки (sort_by, renderer и т.д.) ...
+
+    -- Функция которая выполняется при запуске. В ней можно определять хоткеи и другие настройки
     on_attach = function(bufnr)
         local api = require('nvim-tree.api')
 
@@ -7,17 +8,35 @@ require("nvim-tree").setup({
             return { desc = 'nvim-tree: ' .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
         end
 
-        -- Это ОБЯЗАТЕЛЬНО должно быть тут
+        vim.opt_local.guicursor = "n-v-c:block-NvimTreeCursor,i-ci-ve:ver25"
+        vim.cmd('highlight NvimTreeCursor ctermbg=8 ctermfg=8')
+
+        -- Обязательные дефолтные маппинги
         api.config.mappings.default_on_attach(bufnr)
 
-        -- Кастомные клавиши (h/l для папок)
+        -- Ваши текущие маппинги
         vim.keymap.set('n', 'h', api.node.navigate.parent_close, opts('Close Directory'))
         vim.keymap.set('n', 'l', api.node.open.edit, opts('Open'))
-        -- Поддержка русской раскладки
         vim.keymap.set('n', 'р', api.node.navigate.parent_close, opts('Close Directory'))
         vim.keymap.set('n', 'д', api.node.open.edit, opts('Open'))
+
+        -- --- ДОПОЛНЕНИЯ: Блокировка горизонтального движения ---
+
+        -- Блокируем стрелки
+        vim.keymap.set('n', '<Left>', '<Nop>', opts('Do Nothing'))
+        vim.keymap.set('n', '<Right>', '<Nop>', opts('Do Nothing'))
+
+        -- Блокируем пробел и backspace
+        vim.keymap.set('n', '<Space>', '<Nop>', opts('Do Nothing'))
+        vim.keymap.set('n', '<BS>', '<Nop>', opts('Do Nothing'))
     end,
 
+    view = {
+        cursorline = true,
+    },
+    renderer = {
+        highlight_cursorline = true,
+    },
     --  Отображение иконок в дереве рядом с проблемными файлами
     diagnostics = {
         enable = true,       -- Включает иконки ошибок в дереве

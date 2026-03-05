@@ -79,4 +79,35 @@ M.jump_diagnostic = function(direction)
     vim.diagnostic.jump({ count = direction, float = true })
 end
 
+--- Умное закрытие буфера без закрытия окна
+M.close_buffer_safely = function()
+    local bufnr = vim.api.nvim_get_current_buf()
+    local ft = vim.bo.filetype
+
+    -- 1. Не закрываем nvim-tree этой командой
+    if ft == "NvimTree" then
+        return
+    end
+
+    -- 2. Если буфер изменен (есть несохраненные правки)
+    if vim.bo.modified then
+        local choice = vim.fn.confirm("Файл не сохранен. Закрыть?", "&Да\n&Нет", 2)
+        if choice ~= 1 then return end
+    end
+
+    -- 3. Логика переключения
+    local listed_buffers = vim.fn.getbufinfo({ buflisted = 1 })
+
+    if #listed_buffers > 1 then
+        -- Если есть другие буферы, переключаемся на соседний (предыдущий)
+        vim.cmd("bp")
+        -- Удаляем целевой буфер по ID
+        vim.cmd("bd! " .. bufnr)
+    else
+        -- Если это последний буфер, просто удаляем его
+        -- (Окно не закроется, если открыто nvim-tree или останется пустой буфер)
+        vim.cmd("bd!")
+    end
+end
+
 return M
