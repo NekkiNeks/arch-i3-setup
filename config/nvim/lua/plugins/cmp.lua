@@ -39,4 +39,18 @@ cmp.setup({
         { name = 'buffer' },
         { name = 'luasnip' }, -- если используешь
     },
+
+    -- Окошко подсказок при вводе
+    window = {
+        -- Окно самих подсказок
+        completion = cmp.config.window.bordered({
+            border = "single", -- Та самая тонкая рамка 1 пиксель
+            winhighlight = "Normal:Normal,FloatBorder:FloatBorder,CursorLine:Visual,Search:None",
+        }),
+        -- Окно документации (которое справа от подсказки)
+        documentation = cmp.config.window.bordered({
+            border = "single",
+            winhighlight = "Normal:Normal,FloatBorder:FloatBorder,CursorLine:Visual,Search:None",
+        }),
+    },
 })

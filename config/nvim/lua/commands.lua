@@ -1,13 +1,4 @@
---  из nvim
+--  Выйти из vim целиком, из редактора и из дерева по команде :qa!
 vim.api.nvim_create_user_command("Q", function()
-  vim.cmd("qa!")  -- quit all
+    vim.cmd("qa!") -- quit all
 end, {})
-
-vim.api.nvim_create_autocmd({ "InsertLeave", "BufLeave", "FocusLost" }, {
-  pattern = "*",
-  callback = function()
-    if vim.bo.modified and vim.bo.filetype ~= "NvimTree" then
-      vim.cmd("silent! write")
-    end
-  end,
-})

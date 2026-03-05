@@ -84,7 +84,7 @@ packer.startup(function(use)
     -- [MASON]
     -- менеджер LSP-серверов
     use {
-        'williamboman/mason.nvim',
+        "williamboman/mason.nvim",
         config = function() require('plugins.mason') end,
     }
 
@@ -118,12 +118,12 @@ packer.startup(function(use)
         "ap/vim-css-color",
     }
 
-    -- [HEXOKINASE]
-    -- Подсветка HEX строчек с цветами на основе 256 цветной палитры
-    -- use {
-    --     "RRethy/vim-hexokinase",
-    --     config = function() require('plugins.hexokinase') end,
-    -- }
+    -- [CONFORM]
+    -- Плагин для форматирования
+    use {
+        'stevearc/conform.nvim',
+        config = function() require("plugins.conform") end,
+    }
 
     -- Можно добавить сюда другие плагины
 end)

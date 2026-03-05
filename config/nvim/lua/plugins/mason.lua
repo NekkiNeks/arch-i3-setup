@@ -1,13 +1,21 @@
 require("mason").setup()
+
+-- Список LSP серверов для автоустановки
+local servers = {
+    "lua_ls",
+    "ts_ls",
+    "clangd",
+    "pyright",
+    "bashls",
+    "gopls",
+    "rust_analyzer"
+}
+
 require("mason-lspconfig").setup({
-  ensure_installed = {
-    "lua_ls",        -- lua (ранее sumneko_lua)
-    "ts_ls",         -- js и ts
-    "clangd",        -- c, c++
-    "pyright",       -- python
-    "bashls",        -- bash
-    "gopls",         -- go
-    "rust_analyzer", -- rust
-  },
-  automatic_installation = true,
+    ensure_installed = servers,
+    automatic_installation = true,
 })
+
+-- ВАЖНО: После Mason мы запускаем наш цикл инициализации LSP (который мы правили ранее)
+-- Если ваш код с vim.lsp.enable лежит в отдельном файле, вызовите его здесь:
+require("plugins.lspconfig")

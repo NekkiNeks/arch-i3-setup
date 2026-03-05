@@ -1,3 +1,5 @@
+local utils = require("functions/utils")
+
 -- Включить нумерацию строк
 vim.o.number = true
 vim.o.relativenumber = true
@@ -10,49 +12,49 @@ vim.o.expandtab = true
 -- Используем только цвета терминала (16 цветов)
 vim.o.termguicolors = false
 
+-- Использование системного буфера
+vim.opt.clipboard = "unnamedplus"
+
 -- Кнопка leader теперь Space
 vim.g.mapleader = ' '
 
 -- Кеймаппинг на русскую раскладку
 vim.opt.langmap =
 "йЙцЦуУкКеЕнНгГшШщЩзЗхХъЪфФыЫвВаАпПрРоОлЛдДжЖэЭяЯчЧсСмМиИтТьЬбБюЮ.\\,;qQwWeErRtTyYuUiIoOpP[{]}aAsSdDfFgGhHjJkKlL;:'\"zZxXcCvVbBnNmM\\,<.>/?"
--- Включаем подсветку синтаксиса (без темы, чтобы цвета были из терминала)
-vim.cmd([[syntax enable]])
 
--- Отключаем смену фона, чтобы фон был как у терминала
-vim.cmd([[highlight Normal ctermfg=white]])
+-- Сохранение при выходе из INSERT MODE
 
+vim.api.nvim_create_autocmd({ "InsertLeave", "BufLeave" }, {
+    group = vim.api.nvim_create_augroup("IdeActions", { clear = true }),
+    pattern = "*",
+    callback = function()
+        -- Сохраняем ТОЛЬКО если:
+        -- 1. Файл изменен (modified)
+        -- 2. Это обычный файл (не дерево, не терминал)
+        -- 3. Файл можно редактировать (modifiable)
+        if vim.bo.modified and vim.bo.buftype == "" and vim.bo.modifiable then
+            utils.save_and_format()
+        end
+    end,
+})
 
--- Настройка цветов, чтобы они подтягивались из терминала
-vim.cmd([[
-  hi Normal          ctermfg=white
-  hi Comment         ctermfg=yellow   cterm=italic
-  hi Constant        ctermfg=cyan
-  hi Identifier      ctermfg=green
-  hi Statement       ctermfg=magenta
-  hi PreProc         ctermfg=blue
-  hi Type            ctermfg=cyan
-  hi Special         ctermfg=red
-  hi Underlined      ctermfg=blue     cterm=underline
-  hi Error           ctermfg=white    ctermbg=red        cterm=bold
-  hi Todo            ctermfg=black    ctermbg=yellow
+-- Предложенное ChatGPT (Проверить) --
 
-  hi CursorLine      ctermbg=black    cterm=none
-  hi CursorColumn    ctermbg=black    cterm=none
-  hi Visual          ctermbg=cyan     cterm=none
-  hi LineNr          ctermfg=blue
-  hi StatusLine      ctermfg=white    ctermbg=black
-  hi VertSplit       ctermfg=white    ctermbg=black
-  hi Pmenu           ctermfg=white    ctermbg=black
-  hi PmenuSel        ctermfg=black    ctermbg=yellow
-  hi Search          ctermfg=black    ctermbg=yellow
-
-  hi TSFunction      ctermfg=green
-  hi TSVariable      ctermfg=white
-  hi TSKeyword       ctermfg=magenta
-  hi TSString        ctermfg=cyan
-  hi TSComment       ctermfg=yellow   cterm=italic
-  hi TSConstant      ctermfg=cyan
-  hi TSOperator      ctermfg=magenta
-
-]])
+--  Отображение ошибок на строке (Virtual Text)
+vim.diagnostic.config({
+    -- virtual_text = {
+    --     prefix = '●', -- Символ перед текстом ошибки
+    --     source = "always", -- Показывать, какой именно LSP выдал ошибку
+    -- },
+    virtual_text = true, -- Подскахки на строке
+    signs = true,        -- Значки на полях
+    underline = true,
+    update_in_insert = true,
+    severity_sort = true,
+    -- А вот здесь мы зададим рамку для окон с описанием ошибок
+    float = {
+        border = "single",
+        source = "if_many",
+        severity_sort = true,
+    },
+})

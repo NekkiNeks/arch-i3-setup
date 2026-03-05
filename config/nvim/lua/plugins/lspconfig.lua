@@ -1,5 +1,3 @@
-local on_attach = require("functions/on_attach")
-
 -- Список серверов
 local servers = {
     "lua_ls",
@@ -11,19 +9,15 @@ local servers = {
     "rust_analyzer"
 }
 
-for _, lsp in ipairs(servers) do
-    -- Получаем объект конфигурации
-    local config = vim.lsp.config[lsp]
-    
-    if config then
-        -- Настраиваем параметры
-        local server_opts = {
-            on_attach = on_attach,
-        }
+for _, name in ipairs(servers) do
+    local config = vim.lsp.config[name]
 
-        -- Специфические настройки для Lua
-        if lsp == "lua_ls" then
-            server_opts.settings = {
+    if config then
+        -- opts теперь пустой или содержит только settings
+        local opts = {}
+
+        if name == "lua_ls" then
+            opts.settings = {
                 Lua = {
                     diagnostics = { globals = { "vim" } },
                     workspace = { checkThirdParty = false },
@@ -31,10 +25,7 @@ for _, lsp in ipairs(servers) do
             }
         end
 
-        -- В версиях 0.11+ используется функция vim.lsp.enable
-        -- вместо старого lspconfig[lsp].setup()
-        vim.lsp.enable(lsp, server_opts)
-    else
-        print("LSP: Конфигурация для " .. lsp .. " не найдена")
+        -- Включаем сервер
+        vim.lsp.enable(name, opts)
     end
 end
