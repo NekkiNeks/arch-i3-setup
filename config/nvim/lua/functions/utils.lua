@@ -6,6 +6,7 @@ M.format_code = function()
         conform.format({ bufnr = 0, async = false, lsp_fallback = true })
     else
         -- Если conform нет, пробуем встроенный LSP
+
         vim.lsp.buf.format({ async = false })
     end
 end
@@ -77,6 +78,11 @@ end
 
 M.jump_diagnostic = function(direction)
     vim.diagnostic.jump({ count = direction, float = true })
+end
+
+-- Сменить фокус с файла на дерево файлов
+M.toggle_nvim_tree_focus = function()
+
 end
 
 --- Умное закрытие буфера без закрытия окна

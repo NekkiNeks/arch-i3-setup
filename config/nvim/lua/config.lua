@@ -60,6 +60,10 @@ vim.diagnostic.config({
     },
 })
 
+
+
+
+
 -- -- Включение и выключение курсорной строки
 -- local nvim_tree_group = vim.api.nvim_create_augroup("NvimTreeCursorLine", { clear = true })
 -- vim.api.nvim_create_autocmd("FileType", {
