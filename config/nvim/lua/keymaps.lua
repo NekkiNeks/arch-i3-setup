@@ -24,14 +24,14 @@ vim.keymap.set('n', '<leader>t', ':NvimTreeToggle<CR>', opts)
 vim.keymap.set('n', '<leader>е', ':NvimTreeToggle<CR>', opts)
 
 -- Взаимодействие с Telescope, ':Telescope find_files<CR>', opts)
-vim.keymap.set('n', '<leader>ff', ':Telescope live_grep<CR>', opts)
-vim.keymap.set('n', '<leader>аа', ':Telescope live_grep<CR>', opts)
+vim.keymap.set('n', '<C-f>', ':Telescope live_grep<CR>', opts)
+vim.keymap.set('n', '<C-а>', ':Telescope live_grep<CR>', opts)
 
 -- Биндинги для комбинаций с Ctrl
 -- Ctrl+в → Ctrl+d
-vim.keymap.set({ 'n', 'i', 'v' }, '<C-в>', '<C-d>', opts)
+-- vim.keymap.set({ 'n', 'v' }, '<C-в>', '<C-d>', opts)
 -- Ctrl+г → Ctrl+u
-vim.keymap.set({ 'n', 'i', 'v' }, '<C-г>', '<C-u>', opts)
+-- vim.keymap.set({ 'n', 'v' }, '<C-г>', '<C-u>', opts)
 
 -- Предложенное ChatGPT (Проверить) --
 
