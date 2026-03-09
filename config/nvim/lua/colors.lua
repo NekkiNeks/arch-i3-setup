@@ -4,7 +4,7 @@ local function set_colors()
         vim.api.nvim_set_hl(0, group, opts)
     end
 
-    -- --- 1. РАМКИ (Строго серые) ---
+    --- 1. РАМКИ (Строго серые) ---
     local borders = {
         "FloatBorder",
         "LspInfoBorder",

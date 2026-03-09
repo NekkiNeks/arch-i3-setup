@@ -30,6 +30,9 @@ vim.keymap.set({ 'n', 'i', 'v' }, '<C-г>', '<C-u>', opts)
 
 -- Предложенное ChatGPT (Проверить) --
 
+-- Отключение перемещения курсора при помощи пробела
+vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
+
 -- [HOVER] Перейти к определению [gd или F12]
 vim.keymap.set('n', 'gd', utils.go_to_definition, { desc = "Go to Definition" })
 vim.keymap.set('n', 'пв', utils.go_to_definition, { desc = "Go to Definition (RU)" })

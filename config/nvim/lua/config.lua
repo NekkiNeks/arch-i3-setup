@@ -18,6 +18,10 @@ vim.opt.clipboard = "unnamedplus"
 -- Кнопка leader теперь Space
 vim.g.mapleader = ' '
 
+-- Время задержки времени для того чтобы понять будет ли
+-- нажата еще какая нибудь кнопка после Пробела так как он Leader
+vim.o.timeoutlen = 300 -- Время ожидания команды в миллисекундах
+
 -- Кеймаппинг на русскую раскладку
 vim.opt.langmap =
 "йЙцЦуУкКеЕнНгГшШщЩзЗхХъЪфФыЫвВаАпПрРоОлЛдДжЖэЭяЯчЧсСмМиИтТьЬбБюЮ.\\,;qQwWeErRtTyYuUiIoOpP[{]}aAsSdDfFgGhHjJkKlL;:'\"zZxXcCvVbBnNmM\\,<.>/?"
@@ -59,8 +63,6 @@ vim.diagnostic.config({
         severity_sort = true,
     },
 })
-
-
 
 
 
