@@ -3,7 +3,10 @@ x = 10
 y = 10
 
 [font]
-size = 8
+  size = 12
+
+# [font.normal]
+#   family = "JetBrains Mono NL"
 
 [font.normal]
   family = "terminus"

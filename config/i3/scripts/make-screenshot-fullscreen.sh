@@ -1,15 +1,18 @@
 #!/bin/bash
 
-# Каталог для скриншотов
 DIR="$HOME/Pictures/screenshots"
-
-# Создать каталог, если не существует
 mkdir -p "$DIR"
 
-# Получить текущую дату и время
-FILENAME="$(date '+%Y-%m-%d_%H-%M-%S').jpg"
+FILENAME="$(date '+%Y-%m-%d_%H-%M-%S').png"
+FULLPATH="$DIR/$FILENAME"
 
-# Сделать скриншот всего экрана с сохранением в файл
-scrot -F "$DIR/$FILENAME"
+# 1. Сначала делаем скриншот и сохраняем в файл
+scrot "$FULLPATH"
 
-notify-send "Screenshot" "file <b>$FILENAME</b> saved in <b>$DIR</b>"
+# 2. Копируем уже сохраненный файл в буфер обмена
+xclip -selection clipboard -t image/png -i "$FULLPATH"
+
+# 3. Уведомление
+notify-send "Screenshot" "Файл <b>$FILENAME</b> сохранен и скопирован в буфер"
+
+

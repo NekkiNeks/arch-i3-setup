@@ -1,4 +1,12 @@
 local api = require('nvim-tree.api')
+-- Функция для переключения фокуса между окном кода и деревом файлов
+local function toggle_tree_focus()
+    if vim.bo.filetype == "NvimTree" then
+        vim.cmd("wincmd p")
+    else
+        api.tree.focus()
+    end
+end
 
 -- Кастомная функция которая в начале
 local function custom_on_attach(bufnr)
@@ -13,6 +21,7 @@ local function custom_on_attach(bufnr)
     api.config.mappings.default_on_attach(bufnr)
 
     -- Ваши текущие маппинги
+    vim.keymap.set('n', '<Tab>', toggle_tree_focus, opts('Toggle Focus Back'))
     vim.keymap.set('n', 'h', api.node.navigate.parent_close, opts('Close Directory'))
     vim.keymap.set('n', 'l', api.node.open.edit, opts('Open'))
     vim.keymap.set('n', 'р', api.node.navigate.parent_close, opts('Close Directory'))
@@ -28,19 +37,6 @@ local function custom_on_attach(bufnr)
     vim.keymap.set('n', '<BS>', '<Nop>', opts('Do Nothing'))
 end
 
-local function toggle_tree_focus()
-    local api = require('nvim-tree.api')
-    if vim.bo.filetype == "NvimTree" then
-        vim.cmd("wincmd p")
-    else
-        api.tree.focus()
-    end
-end
-
-
--- Назначение клавиш на выполнение функции смены фокуса
-vim.keymap.set('n', '<leader>e', toggle_tree_focus, { noremap = true, silent = true })
-vim.keymap.set('n', '<leader>у', toggle_tree_focus, { noremap = true, silent = true })
 
 require("nvim-tree").setup({
 
@@ -79,3 +75,5 @@ require("nvim-tree").setup({
         }
     }
 })
+
+return toggle_tree_focus

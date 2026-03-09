@@ -1,5 +1,4 @@
 local utils = require("functions/utils")
-
 -- Включить нумерацию строк
 vim.o.number = true
 vim.o.relativenumber = true
@@ -15,12 +14,10 @@ vim.o.termguicolors = false
 -- Использование системного буфера
 vim.opt.clipboard = "unnamedplus"
 
--- Кнопка leader теперь Space
-vim.g.mapleader = ' '
 
 -- Время задержки времени для того чтобы понять будет ли
 -- нажата еще какая нибудь кнопка после Пробела так как он Leader
-vim.o.timeoutlen = 300 -- Время ожидания команды в миллисекундах
+vim.o.timeoutlen = 200 -- Время ожидания команды в миллисекундах
 
 -- Кеймаппинг на русскую раскладку
 vim.opt.langmap =
@@ -63,25 +60,3 @@ vim.diagnostic.config({
         severity_sort = true,
     },
 })
-
-
-
--- -- Включение и выключение курсорной строки
--- local nvim_tree_group = vim.api.nvim_create_augroup("NvimTreeCursorLine", { clear = true })
--- vim.api.nvim_create_autocmd("FileType", {
---     group = nvim_tree_group,
---     pattern = "NvimTree",
---     callback = function()
---         vim.opt_local.cursorline = true
---     end,
--- })
---
--- -- Опционально: если хотите, чтобы в обычных файлах её точно НЕ БЫЛО
--- vim.api.nvim_create_autocmd("BufEnter", {
---     group = nvim_tree_group,
---     callback = function()
---         if vim.bo.filetype ~= "NvimTree" then
---             vim.opt_local.cursorline = false
---         end
---     end,
--- })

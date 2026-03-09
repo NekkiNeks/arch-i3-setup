@@ -1,5 +1,11 @@
 local opts = { noremap = true, silent = true }
 local utils = require("functions/utils")
+local toggle_tree_focus = require("plugins.nvim-tree")
+
+-- Настройка кнопки <leader>
+vim.g.mapleader = "'"
+vim.keymap.set('n', 'э', "'", { remap = true, silent = true })
+
 
 -- Сохранить и форматировать на привычные C-s / C-ы
 vim.keymap.set({ "n", "i", "v" }, "<C-s>", utils.save_and_format, { desc = "Save & Format" })
@@ -18,9 +24,8 @@ vim.keymap.set('n', '<leader>t', ':NvimTreeToggle<CR>', opts)
 vim.keymap.set('n', '<leader>е', ':NvimTreeToggle<CR>', opts)
 
 -- Взаимодействие с Telescope, ':Telescope find_files<CR>', opts)
-vim.keymap.set('n', '<leader>fg', ':Telescope live_grep<CR>', opts)
-vim.keymap.set('n', '<leader>fb', ':Telescope buffers<CR>', opts)
-vim.keymap.set('n', '<leader>fh', ':Telescope help_tags<CR>', opts)
+vim.keymap.set('n', '<leader>ff', ':Telescope live_grep<CR>', opts)
+vim.keymap.set('n', '<leader>аа', ':Telescope live_grep<CR>', opts)
 
 -- Биндинги для комбинаций с Ctrl
 -- Ctrl+в → Ctrl+d
@@ -33,42 +38,46 @@ vim.keymap.set({ 'n', 'i', 'v' }, '<C-г>', '<C-u>', opts)
 -- Отключение перемещения курсора при помощи пробела
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
+-- Cмена фокуса "код - дерево" [Tab]
+pcall(vim.keymap.del, 'n', '<Tab>')
+vim.keymap.set('n', '<Tab>', toggle_tree_focus, { noremap = true, silent = true })
+
 -- [HOVER] Перейти к определению [gd или F12]
 vim.keymap.set('n', 'gd', utils.go_to_definition, { desc = "Go to Definition" })
 vim.keymap.set('n', 'пв', utils.go_to_definition, { desc = "Go to Definition (RU)" })
 vim.keymap.set('n', '<F12>', utils.go_to_definition, { desc = "Go to Definition" })
 
 -- [HOVER] Показать упоминания [gr]
-vim.keymap.set('n', 'gr', utils.show_references, { desc = "Go to References" })
-vim.keymap.set('n', 'пк', utils.show_references, { desc = "Go to References (RU)" })
+vim.keymap.set('n', 'gr', utils.go_to_references, { desc = "Go to References" })
+vim.keymap.set('n', 'пк', utils.go_to_references, { desc = "Go to References (RU)" })
 
 -- [HOVER] Описание сущности [Leader + k или Shift + k]
-vim.keymap.set('n', '<leader>k', utils.show_documentation, { desc = "LSP Documentataion", nowait = true })
-vim.keymap.set('n', '<leader>л', utils.show_documentation, { desc = "LSP Documentataion (RU)", nowait = true })
+vim.keymap.set('n', '<leader>d', utils.show_documentation, { desc = "LSP Documentataion", nowait = true })
+vim.keymap.set('n', '<leader>в', utils.show_documentation, { desc = "LSP Documentataion (RU)", nowait = true })
 vim.keymap.set('n', 'K', utils.show_documentation, { desc = "LSP Documentataion", nowait = true })
 
--- [HOVER] Открыть окно с ошибкой
-vim.keymap.set('n', '<leader>r', utils.open_diag_float, { desc = "Open Diagnostic", nowait = true })
-vim.keymap.set('n', '<leader>к', utils.open_diag_float, { desc = "Open Diagnostic (RU)", nowait = true })
+-- [HOVER] Открыть окно с ошибкой [Leader + e]
+vim.keymap.set('n', '<leader>e', utils.open_diag_float, { desc = "Open Diagnostic", nowait = true })
+vim.keymap.set('n', '<leader>у', utils.open_diag_float, { desc = "Open Diagnostic (RU)", nowait = true })
 
--- Навигация по ошибкам [Leader + [ и Leader + [ ]
-vim.keymap.set('n', '<leader>]', function() utils.jump_diagnostic(1) end, { desc = "Next Diagnostic" })
-vim.keymap.set('n', '<leader>[', function() utils.jump_diagnostic(-1) end, { desc = "Prev Diagnostic" })
-vim.keymap.set('n', '<leader>ъ', function() utils.jump_diagnostic(1) end, { desc = "Next Diagnostic (RU)" })
-vim.keymap.set('n', '<leader>х', function() utils.jump_diagnostic(-1) end, { desc = "Prev Diagnostic (RU)" })
+-- Навигация по ошибкам [Leader + z и Leader + x ]
+vim.keymap.set('n', '<leader>z', function() utils.jump_diagnostic(1) end, { desc = "Next Diagnostic" })
+vim.keymap.set('n', '<leader>x', function() utils.jump_diagnostic(-1) end, { desc = "Prev Diagnostic" })
+vim.keymap.set('n', '<leader>я', function() utils.jump_diagnostic(1) end, { desc = "Next Diagnostic (RU)" })
+vim.keymap.set('n', '<leader>ч', function() utils.jump_diagnostic(-1) end, { desc = "Prev Diagnostic (RU)" })
 
 -- Управление вкладками bufferline
--- Переместиться влево
+-- Переместиться влево [Shift + x]
 vim.keymap.set('n', 'H', ':BufferLineCyclePrev<CR>', { desc = 'Prev buffer' })
 vim.keymap.set('n', 'Р', ':BufferLineCyclePrev<CR>', { desc = 'Prev buffer' })
 
--- Переместиться вправо
+-- Переместиться вправо [Shift + x]
 vim.keymap.set('n', 'L', ':BufferLineCycleNext<CR>', { desc = 'Next buffer' })
 vim.keymap.set('n', 'Д', ':BufferLineCycleNext<CR>', { desc = 'Next buffer' })
 
--- Закрыть вкладку
-vim.keymap.set('n', '<Leader>o', utils.close_buffer_safely, { desc = 'Close buffer' })
-vim.keymap.set('n', '<Leader>щ', utils.close_buffer_safely, { desc = 'Close buffer' })
+-- Закрыть вкладку [Shift + x]
+vim.keymap.set('n', 'X', utils.close_buffer_safely, { desc = 'Close buffer' })
+vim.keymap.set('n', 'Ч', utils.close_buffer_safely, { desc = 'Close buffer' })
 
 
 -- Глобальный костыль для закрытия любых плавающих окон на 'й'

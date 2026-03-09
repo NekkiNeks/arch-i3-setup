@@ -54,7 +54,7 @@ M.go_to_definition = function()
 end
 
 --  Показать упоминания (Везде где используется функция или переменная)
-M.show_references = function()
+M.go_to_references = function()
     local ok, telescope = pcall(require, "telescope.builtin")
     if ok then
         telescope.lsp_references({
