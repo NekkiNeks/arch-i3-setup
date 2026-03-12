@@ -74,6 +74,19 @@ border- ${color8}
   font-family: "Terminus (TTF) for Windows", monospace !important;
 }
 
+/*Заголовки для выбранного item*/
+.item.s .top,
+.item.s .title
+{
+    color: ${background} !important;
+}
+
+/* Совпадающий текст в выбранных item */
+.item.s match
+{
+    color: ${background} !important;
+}
+
 .top,
 .title {
   color: ${color10} !important;

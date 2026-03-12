@@ -5,7 +5,7 @@
 import i3ipc
 import subprocess
 
-subprocess.run(["notify-send", "script is connected and watching"])
+# subprocess.run(["notify-send", "script is connected and watching"])
 
 
 def on_mode_change(i3, e):
