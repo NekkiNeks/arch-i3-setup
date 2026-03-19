@@ -1,0 +1,143 @@
+/* #ui */
+
+/* VARIABLES
+accent - {{color10}}
+background - {{background}}
+background-hover - {{color8}}
+text-color - {{foreground}}
+border- {{color8}}
+*/
+
+.HUD,
+.HUD::after {
+  background: {{background}} !important;
+  color: {{foreground}} !important;
+  border-radius: 0 !important;
+  font-size: 12px !important;
+  font-family: "Terminus (TTF) for Windows", monospace !important;
+}
+
+/* Hint labels */
+.LH,
+.D > .LH {
+  background: {{background}} !important;   
+  color: {{color10}} !important;        
+  border: 1px solid {{color10}};
+  min-width: 20px;
+  text-align: center;
+  font-family: "Terminus (TTF) for Windows", monospace !important;
+}
+
+
+/* #omni */
+
+#bar {
+  background: {{background}} !important;
+  border: 1px solid {{color8}} !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  font-family: "Terminus (TTF) for Windows", monospace !important;
+}
+
+#input,
+#input * {
+  background: {{background}} !important;
+  color: {{foreground}} !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  font-size: 12px !important;
+  font-family: "Terminus (TTF) for Windows", monospace !important;
+}
+
+#list {
+  background: {{background}} !important;
+  font-family: "Terminus (TTF) for Windows", monospace !important;
+}
+
+.item {
+  background: {{background}} !important;
+  border-bottom: 1px solid {{color8}} !important;
+  border-radius: 0 !important;
+  color: {{foreground}} !important;
+  font-family: "Terminus (TTF) for Windows", monospace !important;
+}
+
+.item:hover {
+  background: {{color8}} !important;
+}
+
+.item.s {
+  background: {{color10}} !important;
+  color: {{foreground}} !important;
+  border-radius: 0 !important;
+  font-family: "Terminus (TTF) for Windows", monospace !important;
+}
+
+/*Заголовки для выбранного item*/
+.item.s .top,
+.item.s .title
+{
+    color: {{background}} !important;
+}
+
+/* Совпадающий текст в выбранных item */
+.item.s match
+{
+    color: {{background}} !important;
+}
+
+.top,
+.title {
+  color: {{color10}} !important;
+  font-size: 12px !important;
+  font-family: "Terminus (TTF) for Windows", monospace !important;
+}
+
+.top
+.icon {
+  display: none;
+}
+
+.bottom {
+  margin-left: 0;
+}
+
+.bottom,
+.bottom a {
+  color: {{foreground}} !important;
+  font-size: 12px !important;
+  font-family: "Terminus (TTF) for Windows", monospace !important;
+}
+
+match {
+  color: {{color10}} !important;
+  font-weight: bold !important;
+  font-family: "Terminus (TTF) for Windows", monospace !important;
+}
+
+/* #find */
+
+#find,
+#find * {
+  font-size: 12px !important;
+  border-radius: 0 !important;
+  font-family: "Terminus (TTF) for Windows", monospace !important;
+}
+
+/* #find:host */
+
+:host,
+:host * {
+  font-size: 12px !important;
+  border-radius: 0 !important;
+  font-family: "Terminus (TTF) for Windows", monospace !important;
+}
+
+/* #find:selection */
+
+::selection {
+  background: {{background}} !important;
+  color: {{color10}} !important;
+  font-family: "Terminus (TTF) for Windows", monospace !important;
+}

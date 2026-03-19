@@ -1,0 +1,33 @@
+tokyonight:
+  bg: 0x1a1b26
+  fg: 0xc0caf5
+  gray: 0x414868
+  red: 0xf7768e
+  green: 0x9ece6a
+  yellow: 0xe0af68
+  blue: 0x7aa2f7
+  purple: 0xbb9af7
+  cyan: 0x7dcfff
+  orange: 0xff9e64
+catppuccin:
+  bg: 0x24273A
+  fg: 0xCAD3F5
+  gray: 0x5B6078
+  red: 0xED8796
+  green: 0xA6DA95
+  yellow: 0xEED49F
+  blue: 0x8AADF4
+  purple: 0xF5BDE6
+  cyan: 0x8BD5CA
+  orange: 0xF5A97F
+customone:
+  bg: {{background}}
+  fg: {{foreground}}
+  gray: {{color8}}
+  red: {{color9}}
+  green: {{color10}}
+  yellow: {{color11}}
+  blue: {{color12}}
+  purple: {{color13}}
+  cyan: {{color14}}
+  orange: {{color10}}

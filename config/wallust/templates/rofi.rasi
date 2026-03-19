@@ -14,10 +14,10 @@ kb-remove-to-eol: ""; // Удалить все после курсора в по
 }
 
 * {
-lightbg: ${background};
-background: ${background};
-lightfg: ${color9};
-foreground: ${foreground};
+lightbg: {{background}};
+background: {{background}};
+lightfg: {{color9}};
+foreground: {{foreground}};
 }
 
 window {

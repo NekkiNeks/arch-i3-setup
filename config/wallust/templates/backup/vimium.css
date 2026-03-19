@@ -1,7 +1,7 @@
 /* #ui */
 
 /* VARIABLES
-accent - ${color9}
+accent - ${color10}
 background - ${background}
 background-hover - ${color8}
 text-color - ${foreground}
@@ -14,18 +14,18 @@ border- ${color8}
   color: ${foreground} !important;
   border-radius: 0 !important;
   font-size: 12px !important;
-  font-family: "Terminus", monospace !important;
+  font-family: "Terminus (TTF) for Windows", monospace !important;
 }
 
 /* Hint labels */
 .LH,
 .D > .LH {
   background: ${background} !important;   
-  color: ${color9} !important;        
-  border: 1px solid ${color9};
+  color: ${color10} !important;        
+  border: 1px solid ${color10};
   min-width: 20px;
   text-align: center;
-  font-family: "Terminus", monospace !important;
+  font-family: "Terminus (TTF) for Windows", monospace !important;
 }
 
 
@@ -36,7 +36,7 @@ border- ${color8}
   border: 1px solid ${color8} !important;
   border-radius: 0 !important;
   box-shadow: none !important;
-  font-family: "Terminus", monospace !important;
+  font-family: "Terminus (TTF) for Windows", monospace !important;
 }
 
 #input,
@@ -47,12 +47,12 @@ border- ${color8}
   border-radius: 0 !important;
   box-shadow: none !important;
   font-size: 12px !important;
-  font-family: "Terminus", monospace !important;
+  font-family: "Terminus (TTF) for Windows", monospace !important;
 }
 
 #list {
   background: ${background} !important;
-  font-family: "Terminus", monospace !important;
+  font-family: "Terminus (TTF) for Windows", monospace !important;
 }
 
 .item {
@@ -60,7 +60,7 @@ border- ${color8}
   border-bottom: 1px solid ${color8} !important;
   border-radius: 0 !important;
   color: ${foreground} !important;
-  font-family: "Terminus", monospace !important;
+  font-family: "Terminus (TTF) for Windows", monospace !important;
 }
 
 .item:hover {
@@ -68,24 +68,30 @@ border- ${color8}
 }
 
 .item.s {
-  background: ${color9} !important;
+  background: ${color10} !important;
   color: ${foreground} !important;
   border-radius: 0 !important;
-  font-family: "Terminus", monospace !important;
+  font-family: "Terminus (TTF) for Windows", monospace !important;
 }
 
 /*Заголовки для выбранного item*/
 .item.s .top,
-.item.s .title {
+.item.s .title
+{
     color: ${background} !important;
 }
 
+/* Совпадающий текст в выбранных item */
+.item.s match
+{
+    color: ${background} !important;
+}
 
 .top,
 .title {
-  color: ${color9} !important;
+  color: ${color10} !important;
   font-size: 12px !important;
-  font-family: "Terminus", monospace !important;
+  font-family: "Terminus (TTF) for Windows", monospace !important;
 }
 
 .top
@@ -101,13 +107,13 @@ border- ${color8}
 .bottom a {
   color: ${foreground} !important;
   font-size: 12px !important;
-  font-family: "Terminus", monospace !important;
+  font-family: "Terminus (TTF) for Windows", monospace !important;
 }
 
 match {
-  color: ${color9} !important;
+  color: ${color10} !important;
   font-weight: bold !important;
-  font-family: "Terminus", monospace !important;
+  font-family: "Terminus (TTF) for Windows", monospace !important;
 }
 
 /* #find */
@@ -116,7 +122,7 @@ match {
 #find * {
   font-size: 12px !important;
   border-radius: 0 !important;
-  font-family: "Terminus", monospace !important;
+  font-family: "Terminus (TTF) for Windows", monospace !important;
 }
 
 /* #find:host */
@@ -125,13 +131,13 @@ match {
 :host * {
   font-size: 12px !important;
   border-radius: 0 !important;
-  font-family: "Terminus", monospace !important;
+  font-family: "Terminus (TTF) for Windows", monospace !important;
 }
 
 /* #find:selection */
 
 ::selection {
   background: ${background} !important;
-  color: ${color9} !important;
-  font-family: "Terminus", monospace !important;
+  color: ${color10} !important;
+  font-family: "Terminus (TTF) for Windows", monospace !important;
 }

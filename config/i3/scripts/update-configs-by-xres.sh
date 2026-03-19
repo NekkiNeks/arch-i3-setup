@@ -13,14 +13,9 @@ fi
 # Подгружаем переменные из xres в переменные окружения
 source $HOME/.config/i3/scripts/load-xres-env.sh
 
-# Обновляем конфиг alacritty на основе template с использованием переменных окружения
-$HOME/.config/alacritty/apply-template.sh
-
-# Обновляем конфиг rofi на основе template с использованием переменных окружения
-$HOME/.config/rofi/apply-template.sh
-
-# Обновляем конфиг dunst на основе template с использованием переменных окружения
-$HOME/.config/dunst/apply-template.sh
-
-# Обновляем конфиг gtt на основе template с использованием переменных окружения
-$HOME/.config/gtt/apply-template.sh
+# Обновляем конфиги на основе template с использованием переменных окружения
+$HOME/.config/alacritty/apply-template.sh   # alacritty
+$HOME/.config/rofi/apply-template.sh        #rofi
+$HOME/.config/dunst/apply-template.sh       #dunst
+$HOME/.config/gtt/apply-template.sh         #gtt
+$HOME/.config/vimium/apply-template.sh      #vimium
