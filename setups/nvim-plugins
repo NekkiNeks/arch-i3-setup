@@ -1,0 +1,53 @@
+#!/bin/bash
+
+# Путь к самому Packer
+PACKER_PATH="$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim"
+
+echo "🔍 Проверка окружения Neovim..."
+
+# 1. Устанавливаем сам Packer, если его нет
+if [ ! -d "$PACKER_PATH" ]; then
+    echo "📥 Клонирование Packer.nvim..."
+    git clone --depth 1 https://github.com/wbthomason/packer.nvim "$PACKER_PATH"
+else
+    echo "✅ Packer уже установлен."
+fi
+
+# 2. Устанавливаем/обновляем плагины
+if command -v nvim &> /dev/null; then
+    echo "📦 Установка плагинов через PackerSync (в фоне)..."
+    
+    # Запускаем nvim в headless режиме. 
+    # После завершения PackerComplete он сам закроется.
+    nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+    
+    echo "✅ Плагины Neovim успешно настроены!"
+else
+    echo "⚠️  Внимание: nvim не найден. Проверь установку пакетов."
+fi!/bin/bash
+
+# Путь к самому Packer
+PACKER_PATH="$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim"
+
+echo "🔍 Проверка окружения Neovim..."
+
+# 1. Устанавливаем сам Packer, если его нет
+if [ ! -d "$PACKER_PATH" ]; then
+    echo "📥 Клонирование Packer.nvim..."
+    git clone --depth 1 https://github.com/wbthomason/packer.nvim "$PACKER_PATH"
+else
+    echo "✅ Packer уже установлен."
+fi
+
+# 2. Устанавливаем/обновляем плагины
+if command -v nvim &> /dev/null; then
+    echo "📦 Установка плагинов через PackerSync (в фоне)..."
+    
+    # Запускаем nvim в headless режиме. 
+    # После завершения PackerComplete он сам закроется.
+    nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+    
+    echo "✅ Плагины Neovim успешно настроены!"
+else
+    echo "⚠️  Внимание: nvim не найден. Проверь установку пакетов."
+fi
