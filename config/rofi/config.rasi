@@ -4,8 +4,8 @@ show-icons: false;
 drun-display-format: "> {name}";
 
 // конфигурация клавиш
-kb-row-up: "Up,Control+k"; // Перемещение вверх
-kb-row-down: "Down,Control+j"; // Перемещение вниз
+kb-row-up: "Up,Control+k,Control+Cyrillic_el"; // Перемещение вверх
+kb-row-down: "Down,Control+j,Control+Cyrillic_o"; // Перемещение вниз
 
 // Чтобы освободить необходимые клавиши нужно переназначить команды в которых они используются
 // "" - Не назначать ничего
@@ -14,10 +14,10 @@ kb-remove-to-eol: ""; // Удалить все после курсора в по
 }
 
 * {
-lightbg: #1d1f21;
-background: #1d1f21;
-lightfg: #ff4747;
-foreground: #cccccc;
+lightbg: #212121;
+background: #212121;
+lightfg: #51ad79;
+foreground: #f6fdd9;
 }
 
 window {

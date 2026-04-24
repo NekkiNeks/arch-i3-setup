@@ -1,0 +1,13 @@
+/* Выровнять иконки в контекстных меню */
+.menuimage,                /* стандартные иконки меню */
+.image-menu,               /* некоторые кастомные меню */
+.menuitem image {          /* fallback для ячеек меню */
+    min-width: 16px;
+    min-height: 16px;
+    padding-right: 6px;
+}
+
+/* Увеличить отступ текста, чтобы не накладывался на иконку */
+.menuitem {
+    padding-left: 6px;
+}

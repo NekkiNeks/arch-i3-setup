@@ -21,13 +21,13 @@ catppuccin:
   cyan: 0x8BD5CA
   orange: 0xF5A97F
 customone:
-  bg: 0x000000
-  fg: 0xeaeaea
-  gray: 0x4d4d4d
-  red: 0xff0100
-  green: 0xbaf602
-  yellow: 0xfd6c13
-  blue: 0x2e31fc
-  purple: 0xf01294
-  cyan: 0x3bb1d4
-  orange: 0xbaf602
+  bg: 0x212121
+  fg: 0xf6fdd9
+  gray: 0xa3ab87
+  red: 0xf67e6a
+  green: 0x51ad79
+  yellow: 0x686ea7
+  blue: 0x39baf5
+  purple: 0x8567fa
+  cyan: 0x9afdfd
+  orange: 0x51ad79

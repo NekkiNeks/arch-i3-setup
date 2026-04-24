@@ -1,0 +1,211 @@
+2026-04-24 12:53:47  INFO   tg-ws-tray  TG WS Proxy версия 1.4.0 starting
+2026-04-24 12:53:47  INFO   tg-ws-tray  Config: {'port': 1443, 'host': '127.0.0.1', 'dc_ip': ['2:149.154.167.220', '4:149.154.167.220'], 'verbose': False, 'check_updates': True, 'log_max_mb': 5, 'buf_kb': 256, 'pool_size': 4, 'secret': 'e5b668204dbedda2c62dafbf60f5a02f'}
+2026-04-24 12:53:47  INFO   tg-ws-tray  Log file: /home/nekzie/.config/TgWsProxy/proxy.log
+2026-04-24 12:53:47  INFO   tg-ws-tray  Starting proxy on 127.0.0.1:1443 ...
+2026-04-24 12:53:47  INFO   tg-mtproto-proxy  ============================================================
+2026-04-24 12:53:47  INFO   tg-mtproto-proxy    Telegram MTProto WS Bridge Proxy
+2026-04-24 12:53:47  INFO   tg-mtproto-proxy    Listening on   127.0.0.1:1443
+2026-04-24 12:53:47  INFO   tg-mtproto-proxy    Secret:        e5b668204dbedda2c62dafbf60f5a02f
+2026-04-24 12:53:47  INFO   tg-mtproto-proxy    Target DC IPs:
+2026-04-24 12:53:47  INFO   tg-mtproto-proxy      DC2: 149.154.167.220
+2026-04-24 12:53:47  INFO   tg-mtproto-proxy      DC4: 149.154.167.220
+2026-04-24 12:53:47  INFO   tg-mtproto-proxy  ============================================================
+2026-04-24 12:53:47  INFO   tg-mtproto-proxy    Connect link:
+2026-04-24 12:53:47  INFO   tg-mtproto-proxy      tg://proxy?server=127.0.0.1&port=1443&secret=dde5b668204dbedda2c62dafbf60f5a02f
+2026-04-24 12:53:47  INFO   tg-mtproto-proxy  ============================================================
+2026-04-24 12:53:47  INFO   tg-mtproto-proxy  WS pool warmup started for 2 DC(s)
+2026-04-24 12:53:47  INFO   tg-ws-tray  Tray icon running
+2026-04-24 12:54:02  INFO   tg-mtproto-proxy  [127.0.0.1:56004] DC2 -> pool hit via 149.154.167.220
+2026-04-24 12:54:07  INFO   tg-mtproto-proxy  [127.0.0.1:56016] DC2 media -> pool hit via 149.154.167.220
+2026-04-24 12:54:07  INFO   tg-mtproto-proxy  [127.0.0.1:56020] DC4 -> pool hit via 149.154.167.220
+2026-04-24 12:54:08  INFO   tg-mtproto-proxy  [127.0.0.1:56024] DC2 media -> pool hit via 149.154.167.220
+2026-04-24 12:54:10  INFO   tg-mtproto-proxy  [127.0.0.1:56026] DC4 media -> pool hit via 149.154.167.220
+2026-04-24 12:54:24  INFO   tg-mtproto-proxy  [127.0.0.1:56016] DC2m WS session closed: ^5.1KB (12 pkts) v335.0KB (18 pkts) in 16.8s
+2026-04-24 12:54:24  INFO   tg-mtproto-proxy  [127.0.0.1:56024] DC2m WS session closed: ^1.1KB (4 pkts) v76.3KB (5 pkts) in 15.4s
+2026-04-24 12:54:26  INFO   tg-mtproto-proxy  [127.0.0.1:56026] DC4m WS session closed: ^2.7KB (7 pkts) v8.1KB (7 pkts) in 16.4s
+2026-04-24 12:54:26  INFO   tg-mtproto-proxy  [127.0.0.1:56020] DC4 WS session closed: ^3.6KB (9 pkts) v102.9KB (13 pkts) in 18.8s
+2026-04-24 12:54:50  INFO   tg-mtproto-proxy  stats: total=5 active=1 ws=5 tcp_fb=0 bad=0 err=0 pool=5/5 up=33.7KB down=1.9MB | ws_bl: none
+2026-04-24 12:55:50  INFO   tg-mtproto-proxy  stats: total=5 active=1 ws=5 tcp_fb=0 bad=0 err=0 pool=5/5 up=36.8KB down=1.9MB | ws_bl: none
+2026-04-24 12:56:50  INFO   tg-mtproto-proxy  stats: total=5 active=1 ws=5 tcp_fb=0 bad=0 err=0 pool=5/5 up=37.6KB down=1.9MB | ws_bl: none
+2026-04-24 12:57:50  INFO   tg-mtproto-proxy  stats: total=5 active=1 ws=5 tcp_fb=0 bad=0 err=0 pool=5/5 up=38.9KB down=1.9MB | ws_bl: none
+2026-04-24 12:58:50  INFO   tg-mtproto-proxy  stats: total=5 active=1 ws=5 tcp_fb=0 bad=0 err=0 pool=5/5 up=42.5KB down=1.9MB | ws_bl: none
+2026-04-24 12:59:50  INFO   tg-mtproto-proxy  stats: total=5 active=1 ws=5 tcp_fb=0 bad=0 err=0 pool=5/5 up=44.8KB down=1.9MB | ws_bl: none
+2026-04-24 13:00:43  INFO   tg-mtproto-proxy  [127.0.0.1:54752] DC1 not in config -> TCP fallback 149.154.175.50:443
+2026-04-24 13:00:43  INFO   tg-mtproto-proxy  [127.0.0.1:54758] DC2 media -> wss://kws2-1.web.telegram.org/apiws via 149.154.167.220
+2026-04-24 13:00:43  INFO   tg-mtproto-proxy  [127.0.0.1:54762] DC4 media -> wss://kws4-1.web.telegram.org/apiws via 149.154.167.220
+2026-04-24 13:00:44  INFO   tg-mtproto-proxy  [127.0.0.1:59962] DC1 not in config -> TCP fallback 149.154.175.50:443
+2026-04-24 13:00:46  INFO   tg-mtproto-proxy  [127.0.0.1:59966] DC1 not in config -> TCP fallback 149.154.175.50:443
+2026-04-24 13:00:50  INFO   tg-mtproto-proxy  [127.0.0.1:59976] DC1 not in config -> TCP fallback 149.154.175.50:443
+2026-04-24 13:00:50  INFO   tg-mtproto-proxy  stats: total=11 active=7 ws=7 tcp_fb=0 bad=0 err=0 pool=5/7 up=49.8KB down=2.0MB | ws_bl: none
+2026-04-24 13:00:53  WARNING  tg-mtproto-proxy  [127.0.0.1:54752] TCP fallback to 149.154.175.50:443 failed: 
+2026-04-24 13:00:54  WARNING  tg-mtproto-proxy  [127.0.0.1:59962] TCP fallback to 149.154.175.50:443 failed: 
+2026-04-24 13:00:56  WARNING  tg-mtproto-proxy  [127.0.0.1:59966] TCP fallback to 149.154.175.50:443 failed: 
+2026-04-24 13:00:58  INFO   tg-mtproto-proxy  [127.0.0.1:41610] DC1 not in config -> TCP fallback 149.154.175.50:443
+2026-04-24 13:00:58  INFO   tg-mtproto-proxy  [127.0.0.1:54758] DC2m WS session closed: ^1.0KB (4 pkts) v32.7KB (4 pkts) in 15.3s
+2026-04-24 13:00:58  INFO   tg-mtproto-proxy  [127.0.0.1:54762] DC4m WS session closed: ^713.0B (4 pkts) v18.2KB (4 pkts) in 15.3s
+2026-04-24 13:01:00  WARNING  tg-mtproto-proxy  [127.0.0.1:59976] TCP fallback to 149.154.175.50:443 failed: 
+2026-04-24 13:01:06  INFO   tg-mtproto-proxy  [127.0.0.1:51684] DC1 not in config -> TCP fallback 149.154.175.50:443
+2026-04-24 13:01:08  WARNING  tg-mtproto-proxy  [127.0.0.1:41610] TCP fallback to 149.154.175.50:443 failed: 
+2026-04-24 13:01:14  INFO   tg-mtproto-proxy  [127.0.0.1:52868] DC1 not in config -> TCP fallback 149.154.175.50:443
+2026-04-24 13:01:16  WARNING  tg-mtproto-proxy  [127.0.0.1:51684] TCP fallback to 149.154.175.50:443 failed: 
+2026-04-24 13:01:22  INFO   tg-mtproto-proxy  [127.0.0.1:52874] DC1 not in config -> TCP fallback 149.154.175.50:443
+2026-04-24 13:01:24  WARNING  tg-mtproto-proxy  [127.0.0.1:52868] TCP fallback to 149.154.175.50:443 failed: 
+2026-04-24 13:01:30  INFO   tg-mtproto-proxy  [127.0.0.1:44412] DC1 not in config -> TCP fallback 149.154.175.50:443
+2026-04-24 13:01:32  WARNING  tg-mtproto-proxy  [127.0.0.1:52874] TCP fallback to 149.154.175.50:443 failed: 
+2026-04-24 13:01:38  INFO   tg-mtproto-proxy  [127.0.0.1:40068] DC1 not in config -> TCP fallback 149.154.175.50:443
+2026-04-24 13:01:40  WARNING  tg-mtproto-proxy  [127.0.0.1:44412] TCP fallback to 149.154.175.50:443 failed: 
+2026-04-24 13:01:45  INFO   tg-mtproto-proxy  [127.0.0.1:40324] DC2 media -> pool hit via 149.154.167.220
+2026-04-24 13:01:45  INFO   tg-mtproto-proxy  [127.0.0.1:40332] DC2 media -> pool hit via 149.154.167.220
+2026-04-24 13:01:46  INFO   tg-mtproto-proxy  [127.0.0.1:40336] DC1 not in config -> TCP fallback 149.154.175.50:443
+2026-04-24 13:01:48  WARNING  tg-mtproto-proxy  [127.0.0.1:40068] TCP fallback to 149.154.175.50:443 failed: 
+2026-04-24 13:01:50  INFO   tg-mtproto-proxy  stats: total=20 active=4 ws=9 tcp_fb=0 bad=0 err=0 pool=7/9 up=54.8KB down=2.0MB | ws_bl: none
+2026-04-24 13:01:54  INFO   tg-mtproto-proxy  [127.0.0.1:47504] DC1 not in config -> TCP fallback 149.154.175.50:443
+2026-04-24 13:01:56  WARNING  tg-mtproto-proxy  [127.0.0.1:40336] TCP fallback to 149.154.175.50:443 failed: 
+2026-04-24 13:02:01  INFO   tg-mtproto-proxy  [127.0.0.1:40324] DC2m WS session closed: ^996.0B (4 pkts) v27.2KB (4 pkts) in 15.4s
+2026-04-24 13:02:01  INFO   tg-mtproto-proxy  [127.0.0.1:40332] DC2m WS session closed: ^833.0B (4 pkts) v51.0KB (4 pkts) in 15.4s
+2026-04-24 13:02:04  WARNING  tg-mtproto-proxy  [127.0.0.1:47504] TCP fallback to 149.154.175.50:443 failed: 
+2026-04-24 13:02:28  INFO   tg-mtproto-proxy  [127.0.0.1:56106] DC2 media -> pool hit via 149.154.167.220
+2026-04-24 13:02:28  INFO   tg-mtproto-proxy  [127.0.0.1:56108] DC2 media -> pool hit via 149.154.167.220
+2026-04-24 13:02:43  INFO   tg-mtproto-proxy  [127.0.0.1:56108] DC2m WS session closed: ^1.1KB (4 pkts) v49.3KB (5 pkts) in 15.4s
+2026-04-24 13:02:43  INFO   tg-mtproto-proxy  [127.0.0.1:56106] DC2m WS session closed: ^977.0B (4 pkts) v45.1KB (5 pkts) in 15.4s
+2026-04-24 13:02:50  INFO   tg-mtproto-proxy  stats: total=23 active=1 ws=11 tcp_fb=0 bad=0 err=0 pool=9/11 up=59.9KB down=2.1MB | ws_bl: none
+2026-04-24 13:03:50  INFO   tg-mtproto-proxy  stats: total=23 active=1 ws=11 tcp_fb=0 bad=0 err=0 pool=9/11 up=63.5KB down=2.1MB | ws_bl: none
+2026-04-24 13:04:50  INFO   tg-mtproto-proxy  stats: total=23 active=1 ws=11 tcp_fb=0 bad=0 err=0 pool=9/11 up=65.8KB down=2.1MB | ws_bl: none
+2026-04-24 13:05:50  INFO   tg-mtproto-proxy  stats: total=23 active=1 ws=11 tcp_fb=0 bad=0 err=0 pool=9/11 up=66.4KB down=2.1MB | ws_bl: none
+2026-04-24 13:06:50  INFO   tg-mtproto-proxy  stats: total=23 active=1 ws=11 tcp_fb=0 bad=0 err=0 pool=9/11 up=67.0KB down=2.1MB | ws_bl: none
+2026-04-24 13:07:50  INFO   tg-mtproto-proxy  stats: total=23 active=1 ws=11 tcp_fb=0 bad=0 err=0 pool=9/11 up=69.2KB down=2.2MB | ws_bl: none
+2026-04-24 13:08:50  INFO   tg-mtproto-proxy  stats: total=23 active=1 ws=11 tcp_fb=0 bad=0 err=0 pool=9/11 up=70.5KB down=2.2MB | ws_bl: none
+2026-04-24 13:09:50  INFO   tg-mtproto-proxy  stats: total=23 active=1 ws=11 tcp_fb=0 bad=0 err=0 pool=9/11 up=71.3KB down=2.2MB | ws_bl: none
+2026-04-24 13:10:50  INFO   tg-mtproto-proxy  stats: total=23 active=1 ws=11 tcp_fb=0 bad=0 err=0 pool=9/11 up=72.8KB down=2.2MB | ws_bl: none
+2026-04-24 13:11:50  INFO   tg-mtproto-proxy  stats: total=23 active=1 ws=11 tcp_fb=0 bad=0 err=0 pool=9/11 up=73.5KB down=2.2MB | ws_bl: none
+2026-04-24 13:12:50  INFO   tg-mtproto-proxy  stats: total=23 active=1 ws=11 tcp_fb=0 bad=0 err=0 pool=9/11 up=74.6KB down=2.2MB | ws_bl: none
+2026-04-24 13:13:50  INFO   tg-mtproto-proxy  stats: total=23 active=1 ws=11 tcp_fb=0 bad=0 err=0 pool=9/11 up=76.5KB down=2.2MB | ws_bl: none
+2026-04-24 13:14:50  INFO   tg-mtproto-proxy  stats: total=23 active=1 ws=11 tcp_fb=0 bad=0 err=0 pool=9/11 up=78.6KB down=2.2MB | ws_bl: none
+2026-04-24 13:15:50  INFO   tg-mtproto-proxy  stats: total=23 active=1 ws=11 tcp_fb=0 bad=0 err=0 pool=9/11 up=79.3KB down=2.2MB | ws_bl: none
+2026-04-24 13:16:50  INFO   tg-mtproto-proxy  stats: total=23 active=1 ws=11 tcp_fb=0 bad=0 err=0 pool=9/11 up=80.4KB down=2.2MB | ws_bl: none
+2026-04-24 13:17:50  INFO   tg-mtproto-proxy  stats: total=23 active=1 ws=11 tcp_fb=0 bad=0 err=0 pool=9/11 up=81.3KB down=2.2MB | ws_bl: none
+2026-04-24 13:18:50  INFO   tg-mtproto-proxy  stats: total=23 active=1 ws=11 tcp_fb=0 bad=0 err=0 pool=9/11 up=82.2KB down=2.2MB | ws_bl: none
+2026-04-24 13:19:50  INFO   tg-mtproto-proxy  stats: total=23 active=1 ws=11 tcp_fb=0 bad=0 err=0 pool=9/11 up=83.5KB down=2.2MB | ws_bl: none
+2026-04-24 13:20:50  INFO   tg-mtproto-proxy  stats: total=23 active=1 ws=11 tcp_fb=0 bad=0 err=0 pool=9/11 up=85.8KB down=2.2MB | ws_bl: none
+2026-04-24 13:20:52  INFO   tg-mtproto-proxy  [127.0.0.1:56004] DC2 WS session closed: ^68.2KB (228 pkts) v1.5MB (439 pkts) in 1606.1s
+2026-04-24 13:20:52  INFO   tg-mtproto-proxy  [127.0.0.1:57946] DC2 -> wss://kws2.web.telegram.org/apiws via 149.154.167.220
+2026-04-24 13:21:50  INFO   tg-mtproto-proxy  stats: total=24 active=1 ws=12 tcp_fb=0 bad=0 err=0 pool=9/12 up=87.4KB down=2.2MB | ws_bl: none
+2026-04-24 13:22:50  INFO   tg-mtproto-proxy  stats: total=24 active=1 ws=12 tcp_fb=0 bad=0 err=0 pool=9/12 up=87.8KB down=2.2MB | ws_bl: none
+2026-04-24 13:23:50  INFO   tg-mtproto-proxy  stats: total=24 active=1 ws=12 tcp_fb=0 bad=0 err=0 pool=9/12 up=88.4KB down=2.2MB | ws_bl: none
+2026-04-24 13:24:50  INFO   tg-mtproto-proxy  stats: total=24 active=1 ws=12 tcp_fb=0 bad=0 err=0 pool=9/12 up=90.0KB down=2.2MB | ws_bl: none
+2026-04-24 13:25:50  INFO   tg-mtproto-proxy  stats: total=24 active=1 ws=12 tcp_fb=0 bad=0 err=0 pool=9/12 up=91.0KB down=2.2MB | ws_bl: none
+2026-04-24 13:26:50  INFO   tg-mtproto-proxy  stats: total=24 active=1 ws=12 tcp_fb=0 bad=0 err=0 pool=9/12 up=91.6KB down=2.2MB | ws_bl: none
+2026-04-24 13:27:50  INFO   tg-mtproto-proxy  stats: total=24 active=1 ws=12 tcp_fb=0 bad=0 err=0 pool=9/12 up=92.0KB down=2.2MB | ws_bl: none
+2026-04-24 13:28:50  INFO   tg-mtproto-proxy  stats: total=24 active=1 ws=12 tcp_fb=0 bad=0 err=0 pool=9/12 up=92.7KB down=2.2MB | ws_bl: none
+2026-04-24 13:29:50  INFO   tg-mtproto-proxy  stats: total=24 active=1 ws=12 tcp_fb=0 bad=0 err=0 pool=9/12 up=93.4KB down=2.2MB | ws_bl: none
+2026-04-24 13:30:50  INFO   tg-mtproto-proxy  stats: total=24 active=1 ws=12 tcp_fb=0 bad=0 err=0 pool=9/12 up=94.5KB down=2.2MB | ws_bl: none
+2026-04-24 13:31:50  INFO   tg-mtproto-proxy  stats: total=24 active=1 ws=12 tcp_fb=0 bad=0 err=0 pool=9/12 up=95.9KB down=2.2MB | ws_bl: none
+2026-04-24 13:32:50  INFO   tg-mtproto-proxy  stats: total=24 active=1 ws=12 tcp_fb=0 bad=0 err=0 pool=9/12 up=96.1KB down=2.2MB | ws_bl: none
+2026-04-24 13:33:50  INFO   tg-mtproto-proxy  stats: total=24 active=1 ws=12 tcp_fb=0 bad=0 err=0 pool=9/12 up=97.2KB down=2.2MB | ws_bl: none
+2026-04-24 13:34:50  INFO   tg-mtproto-proxy  stats: total=24 active=1 ws=12 tcp_fb=0 bad=0 err=0 pool=9/12 up=98.0KB down=2.2MB | ws_bl: none
+2026-04-24 13:35:50  INFO   tg-mtproto-proxy  stats: total=24 active=1 ws=12 tcp_fb=0 bad=0 err=0 pool=9/12 up=98.6KB down=2.2MB | ws_bl: none
+2026-04-24 13:36:50  INFO   tg-mtproto-proxy  stats: total=24 active=1 ws=12 tcp_fb=0 bad=0 err=0 pool=9/12 up=99.8KB down=2.2MB | ws_bl: none
+2026-04-24 13:37:50  INFO   tg-mtproto-proxy  stats: total=24 active=1 ws=12 tcp_fb=0 bad=0 err=0 pool=9/12 up=100.2KB down=2.2MB | ws_bl: none
+2026-04-24 13:38:50  INFO   tg-mtproto-proxy  stats: total=24 active=1 ws=12 tcp_fb=0 bad=0 err=0 pool=9/12 up=101.0KB down=2.2MB | ws_bl: none
+2026-04-24 13:39:50  INFO   tg-mtproto-proxy  stats: total=24 active=1 ws=12 tcp_fb=0 bad=0 err=0 pool=9/12 up=102.0KB down=2.2MB | ws_bl: none
+2026-04-24 13:40:50  INFO   tg-mtproto-proxy  stats: total=24 active=1 ws=12 tcp_fb=0 bad=0 err=0 pool=9/12 up=103.5KB down=2.2MB | ws_bl: none
+2026-04-24 13:41:51  INFO   tg-mtproto-proxy  stats: total=24 active=1 ws=12 tcp_fb=0 bad=0 err=0 pool=9/12 up=104.0KB down=2.2MB | ws_bl: none
+2026-04-24 13:42:36  INFO   tg-mtproto-proxy  [127.0.0.1:42914] DC2 media -> wss://kws2-1.web.telegram.org/apiws via 149.154.167.220
+2026-04-24 13:42:36  INFO   tg-mtproto-proxy  [127.0.0.1:42916] DC2 media -> wss://kws2-1.web.telegram.org/apiws via 149.154.167.220
+2026-04-24 13:42:51  INFO   tg-mtproto-proxy  stats: total=26 active=3 ws=14 tcp_fb=0 bad=0 err=0 pool=9/14 up=108.6KB down=2.4MB | ws_bl: none
+2026-04-24 13:42:52  INFO   tg-mtproto-proxy  [127.0.0.1:42914] DC2m WS session closed: ^1.1KB (4 pkts) v18.8KB (5 pkts) in 15.7s
+2026-04-24 13:42:52  INFO   tg-mtproto-proxy  [127.0.0.1:42916] DC2m WS session closed: ^1006.0B (4 pkts) v135.7KB (6 pkts) in 15.7s
+2026-04-24 13:42:53  INFO   tg-mtproto-proxy  [127.0.0.1:43360] DC2 media -> pool hit via 149.154.167.220
+2026-04-24 13:42:53  INFO   tg-mtproto-proxy  [127.0.0.1:43362] DC2 media -> pool hit via 149.154.167.220
+2026-04-24 13:42:54  INFO   tg-mtproto-proxy  [127.0.0.1:46472] DC2 media -> pool hit via 149.154.167.220
+2026-04-24 13:42:55  INFO   tg-mtproto-proxy  [127.0.0.1:46482] DC2 media -> pool hit via 149.154.167.220
+2026-04-24 13:42:57  INFO   tg-mtproto-proxy  [127.0.0.1:46498] DC2 media -> pool hit via 149.154.167.220
+2026-04-24 13:42:58  INFO   tg-mtproto-proxy  [127.0.0.1:46512] DC2 media -> pool hit via 149.154.167.220
+2026-04-24 13:42:59  INFO   tg-mtproto-proxy  [127.0.0.1:46524] DC2 media -> pool hit via 149.154.167.220
+2026-04-24 13:43:00  INFO   tg-mtproto-proxy  [127.0.0.1:46540] DC2 media -> pool hit via 149.154.167.220
+2026-04-24 13:43:41  INFO   tg-mtproto-proxy  [127.0.0.1:43362] DC2m WS session closed: ^11.5KB (32 pkts) v3.9MB (40 pkts) in 48.5s
+2026-04-24 13:43:41  INFO   tg-mtproto-proxy  [127.0.0.1:43360] DC2m WS session closed: ^12.9KB (40 pkts) v4.8MB (48 pkts) in 48.5s
+2026-04-24 13:43:41  INFO   tg-mtproto-proxy  [127.0.0.1:46482] DC2m WS session closed: ^5.2KB (18 pkts) v2.1MB (21 pkts) in 46.6s
+2026-04-24 13:43:41  INFO   tg-mtproto-proxy  [127.0.0.1:46498] DC2m WS session closed: ^4.6KB (16 pkts) v1.6MB (16 pkts) in 44.3s
+2026-04-24 13:43:41  INFO   tg-mtproto-proxy  [127.0.0.1:46472] DC2m WS session closed: ^8.1KB (26 pkts) v3.0MB (30 pkts) in 47.4s
+2026-04-24 13:43:41  INFO   tg-mtproto-proxy  [127.0.0.1:46524] DC2m WS session closed: ^2.6KB (9 pkts) v769.1KB (9 pkts) in 42.2s
+2026-04-24 13:43:41  INFO   tg-mtproto-proxy  [127.0.0.1:46540] DC2m WS session closed: ^1.4KB (5 pkts) v256.6KB (5 pkts) in 41.1s
+2026-04-24 13:43:41  INFO   tg-mtproto-proxy  [127.0.0.1:46512] DC2m WS session closed: ^4.4KB (14 pkts) v1.4MB (14 pkts) in 43.3s
+2026-04-24 13:43:44  INFO   tg-mtproto-proxy  [127.0.0.1:36000] DC2 media -> pool hit via 149.154.167.220
+2026-04-24 13:43:51  INFO   tg-mtproto-proxy  stats: total=35 active=2 ws=23 tcp_fb=0 bad=0 err=0 pool=18/23 up=166.1KB down=20.4MB | ws_bl: none
+2026-04-24 13:43:59  INFO   tg-mtproto-proxy  [127.0.0.1:36000] DC2m WS session closed: ^923.0B (4 pkts) v48.9KB (4 pkts) in 15.4s
+2026-04-24 13:44:12  INFO   tg-mtproto-proxy  [127.0.0.1:41722] DC2 media -> pool hit via 149.154.167.220
+2026-04-24 13:44:12  INFO   tg-mtproto-proxy  [127.0.0.1:41736] DC2 media -> pool hit via 149.154.167.220
+2026-04-24 13:44:12  INFO   tg-mtproto-proxy  [127.0.0.1:41734] DC2 media -> pool hit via 149.154.167.220
+2026-04-24 13:44:28  INFO   tg-mtproto-proxy  [127.0.0.1:60690] DC2 media -> pool hit via 149.154.167.220
+2026-04-24 13:44:28  INFO   tg-mtproto-proxy  [127.0.0.1:60688] DC2 media -> pool hit via 149.154.167.220
+2026-04-24 13:44:28  INFO   tg-mtproto-proxy  [127.0.0.1:60710] DC2 media -> wss://kws2-1.web.telegram.org/apiws via 149.154.167.220
+2026-04-24 13:44:28  INFO   tg-mtproto-proxy  [127.0.0.1:60706] DC2 media -> wss://kws2-1.web.telegram.org/apiws via 149.154.167.220
+2026-04-24 13:44:28  INFO   tg-mtproto-proxy  [127.0.0.1:60708] DC2 media -> wss://kws2-1.web.telegram.org/apiws via 149.154.167.220
+2026-04-24 13:44:28  INFO   tg-mtproto-proxy  [127.0.0.1:60722] DC4 media -> wss://kws4-1.web.telegram.org/apiws via 149.154.167.220
+2026-04-24 13:44:43  INFO   tg-mtproto-proxy  [127.0.0.1:60722] DC4m WS session closed: ^950.0B (4 pkts) v128.5KB (4 pkts) in 15.5s
+2026-04-24 13:44:44  INFO   tg-mtproto-proxy  [127.0.0.1:44862] DC4 media -> pool hit via 149.154.167.220
+2026-04-24 13:44:51  INFO   tg-mtproto-proxy  stats: total=45 active=10 ws=33 tcp_fb=0 bad=0 err=0 pool=24/33 up=220.8KB down=31.0MB | ws_bl: none
+2026-04-24 13:45:00  INFO   tg-mtproto-proxy  [127.0.0.1:44862] DC4m WS session closed: ^986.0B (4 pkts) v545.0B (4 pkts) in 15.2s
+2026-04-24 13:45:03  INFO   tg-mtproto-proxy  [127.0.0.1:60708] DC2m WS session closed: ^3.4KB (11 pkts) v1.0MB (12 pkts) in 35.4s
+2026-04-24 13:45:03  INFO   tg-mtproto-proxy  [127.0.0.1:60690] DC2m WS session closed: ^5.5KB (19 pkts) v1.3MB (20 pkts) in 35.6s
+2026-04-24 13:45:03  INFO   tg-mtproto-proxy  [127.0.0.1:60688] DC2m WS session closed: ^5.9KB (20 pkts) v1.3MB (25 pkts) in 35.6s
+2026-04-24 13:45:03  INFO   tg-mtproto-proxy  [127.0.0.1:60710] DC2m WS session closed: ^3.8KB (12 pkts) v1.1MB (13 pkts) in 35.4s
+2026-04-24 13:45:03  INFO   tg-mtproto-proxy  [127.0.0.1:60706] DC2m WS session closed: ^3.4KB (12 pkts) v1.1MB (14 pkts) in 35.4s
+2026-04-24 13:45:03  INFO   tg-mtproto-proxy  [127.0.0.1:41734] DC2m WS session closed: ^6.7KB (22 pkts) v1.4MB (36 pkts) in 50.9s
+2026-04-24 13:45:03  INFO   tg-mtproto-proxy  [127.0.0.1:41736] DC2m WS session closed: ^6.9KB (22 pkts) v1.7MB (34 pkts) in 50.9s
+2026-04-24 13:45:03  INFO   tg-mtproto-proxy  [127.0.0.1:41722] DC2m WS session closed: ^7.1KB (23 pkts) v1.5MB (27 pkts) in 51.0s
+2026-04-24 13:45:08  INFO   tg-mtproto-proxy  [127.0.0.1:41316] DC2 media -> pool hit via 149.154.167.220
+2026-04-24 13:45:08  INFO   tg-mtproto-proxy  [127.0.0.1:41320] DC2 media -> pool hit via 149.154.167.220
+2026-04-24 13:45:08  INFO   tg-mtproto-proxy  [127.0.0.1:41324] DC2 media -> pool hit via 149.154.167.220
+2026-04-24 13:45:08  INFO   tg-mtproto-proxy  [127.0.0.1:41336] DC2 media -> pool hit via 149.154.167.220
+2026-04-24 13:45:24  INFO   tg-mtproto-proxy  [127.0.0.1:41316] DC2m WS session closed: ^1.1KB (5 pkts) v57.9KB (5 pkts) in 16.0s
+2026-04-24 13:45:24  INFO   tg-mtproto-proxy  [127.0.0.1:41336] DC2m WS session closed: ^691.0B (4 pkts) v27.7KB (4 pkts) in 15.7s
+2026-04-24 13:45:24  INFO   tg-mtproto-proxy  [127.0.0.1:41320] DC2m WS session closed: ^1014.0B (5 pkts) v12.1KB (5 pkts) in 15.8s
+2026-04-24 13:45:24  INFO   tg-mtproto-proxy  [127.0.0.1:41324] DC2m WS session closed: ^922.0B (4 pkts) v32.7KB (4 pkts) in 15.8s
+2026-04-24 13:45:51  INFO   tg-mtproto-proxy  stats: total=49 active=1 ws=37 tcp_fb=0 bad=0 err=0 pool=28/37 up=232.8KB down=31.3MB | ws_bl: none
+2026-04-24 13:46:51  INFO   tg-mtproto-proxy  stats: total=49 active=1 ws=37 tcp_fb=0 bad=0 err=0 pool=28/37 up=234.2KB down=31.3MB | ws_bl: none
+2026-04-24 13:47:51  INFO   tg-mtproto-proxy  stats: total=49 active=1 ws=37 tcp_fb=0 bad=0 err=0 pool=28/37 up=234.9KB down=31.3MB | ws_bl: none
+2026-04-24 13:48:51  INFO   tg-mtproto-proxy  stats: total=49 active=1 ws=37 tcp_fb=0 bad=0 err=0 pool=28/37 up=236.1KB down=31.3MB | ws_bl: none
+2026-04-24 13:49:51  INFO   tg-mtproto-proxy  stats: total=49 active=1 ws=37 tcp_fb=0 bad=0 err=0 pool=28/37 up=236.6KB down=31.3MB | ws_bl: none
+2026-04-24 13:50:51  INFO   tg-mtproto-proxy  stats: total=49 active=1 ws=37 tcp_fb=0 bad=0 err=0 pool=28/37 up=237.7KB down=31.3MB | ws_bl: none
+2026-04-24 13:51:51  INFO   tg-mtproto-proxy  stats: total=49 active=1 ws=37 tcp_fb=0 bad=0 err=0 pool=28/37 up=238.7KB down=31.3MB | ws_bl: none
+2026-04-24 13:52:51  INFO   tg-mtproto-proxy  stats: total=49 active=1 ws=37 tcp_fb=0 bad=0 err=0 pool=28/37 up=239.8KB down=31.3MB | ws_bl: none
+2026-04-24 13:53:51  INFO   tg-mtproto-proxy  stats: total=49 active=1 ws=37 tcp_fb=0 bad=0 err=0 pool=28/37 up=241.6KB down=31.3MB | ws_bl: none
+2026-04-24 13:54:51  INFO   tg-mtproto-proxy  stats: total=49 active=1 ws=37 tcp_fb=0 bad=0 err=0 pool=28/37 up=243.3KB down=31.3MB | ws_bl: none
+2026-04-24 13:55:51  INFO   tg-mtproto-proxy  stats: total=49 active=1 ws=37 tcp_fb=0 bad=0 err=0 pool=28/37 up=244.0KB down=31.3MB | ws_bl: none
+2026-04-24 13:56:51  INFO   tg-mtproto-proxy  stats: total=49 active=1 ws=37 tcp_fb=0 bad=0 err=0 pool=28/37 up=244.6KB down=31.3MB | ws_bl: none
+2026-04-24 13:57:51  INFO   tg-mtproto-proxy  stats: total=49 active=1 ws=37 tcp_fb=0 bad=0 err=0 pool=28/37 up=246.5KB down=31.3MB | ws_bl: none
+2026-04-24 13:58:51  INFO   tg-mtproto-proxy  stats: total=49 active=1 ws=37 tcp_fb=0 bad=0 err=0 pool=28/37 up=247.4KB down=31.3MB | ws_bl: none
+2026-04-24 13:59:51  INFO   tg-mtproto-proxy  stats: total=49 active=1 ws=37 tcp_fb=0 bad=0 err=0 pool=28/37 up=248.2KB down=31.3MB | ws_bl: none
+2026-04-24 14:00:51  INFO   tg-mtproto-proxy  stats: total=49 active=1 ws=37 tcp_fb=0 bad=0 err=0 pool=28/37 up=249.6KB down=31.3MB | ws_bl: none
+2026-04-24 14:01:51  INFO   tg-mtproto-proxy  stats: total=49 active=1 ws=37 tcp_fb=0 bad=0 err=0 pool=28/37 up=250.6KB down=31.3MB | ws_bl: none
+2026-04-24 14:02:51  INFO   tg-mtproto-proxy  stats: total=49 active=1 ws=37 tcp_fb=0 bad=0 err=0 pool=28/37 up=251.3KB down=31.3MB | ws_bl: none
+2026-04-24 14:03:51  INFO   tg-mtproto-proxy  stats: total=49 active=1 ws=37 tcp_fb=0 bad=0 err=0 pool=28/37 up=252.4KB down=31.3MB | ws_bl: none
+2026-04-24 14:04:51  INFO   tg-mtproto-proxy  stats: total=49 active=1 ws=37 tcp_fb=0 bad=0 err=0 pool=28/37 up=253.5KB down=31.3MB | ws_bl: none
+2026-04-24 14:05:51  INFO   tg-mtproto-proxy  stats: total=49 active=1 ws=37 tcp_fb=0 bad=0 err=0 pool=28/37 up=254.7KB down=31.4MB | ws_bl: none
+2026-04-24 14:06:51  INFO   tg-mtproto-proxy  stats: total=49 active=1 ws=37 tcp_fb=0 bad=0 err=0 pool=28/37 up=255.2KB down=31.4MB | ws_bl: none
+2026-04-24 14:07:51  INFO   tg-mtproto-proxy  stats: total=49 active=1 ws=37 tcp_fb=0 bad=0 err=0 pool=28/37 up=255.9KB down=31.4MB | ws_bl: none
+2026-04-24 14:08:51  INFO   tg-mtproto-proxy  stats: total=49 active=1 ws=37 tcp_fb=0 bad=0 err=0 pool=28/37 up=257.2KB down=31.4MB | ws_bl: none
+2026-04-24 14:09:51  INFO   tg-mtproto-proxy  stats: total=49 active=1 ws=37 tcp_fb=0 bad=0 err=0 pool=28/37 up=258.1KB down=31.4MB | ws_bl: none
+2026-04-24 14:10:33  INFO   tg-mtproto-proxy  [127.0.0.1:50026] DC2 media -> wss://kws2-1.web.telegram.org/apiws via 149.154.167.220
+2026-04-24 14:10:49  INFO   tg-mtproto-proxy  [127.0.0.1:50026] DC2m WS session closed: ^999.0B (4 pkts) v7.9KB (4 pkts) in 15.3s
+2026-04-24 14:10:51  INFO   tg-mtproto-proxy  stats: total=50 active=1 ws=38 tcp_fb=0 bad=0 err=0 pool=28/38 up=259.6KB down=31.4MB | ws_bl: none
+2026-04-24 14:11:51  INFO   tg-mtproto-proxy  stats: total=50 active=1 ws=38 tcp_fb=0 bad=0 err=0 pool=28/38 up=260.8KB down=31.4MB | ws_bl: none
+2026-04-24 14:12:51  INFO   tg-mtproto-proxy  stats: total=50 active=1 ws=38 tcp_fb=0 bad=0 err=0 pool=28/38 up=261.5KB down=31.4MB | ws_bl: none
+2026-04-24 14:13:51  INFO   tg-mtproto-proxy  stats: total=50 active=1 ws=38 tcp_fb=0 bad=0 err=0 pool=28/38 up=262.1KB down=31.4MB | ws_bl: none
+2026-04-24 14:14:51  INFO   tg-mtproto-proxy  stats: total=50 active=1 ws=38 tcp_fb=0 bad=0 err=0 pool=28/38 up=262.8KB down=31.4MB | ws_bl: none
+2026-04-24 14:15:51  INFO   tg-mtproto-proxy  stats: total=50 active=1 ws=38 tcp_fb=0 bad=0 err=0 pool=28/38 up=263.6KB down=31.4MB | ws_bl: none
+2026-04-24 14:16:51  INFO   tg-mtproto-proxy  stats: total=50 active=1 ws=38 tcp_fb=0 bad=0 err=0 pool=28/38 up=264.6KB down=31.4MB | ws_bl: none
+2026-04-24 14:17:51  INFO   tg-mtproto-proxy  stats: total=50 active=1 ws=38 tcp_fb=0 bad=0 err=0 pool=28/38 up=265.4KB down=31.4MB | ws_bl: none
+2026-04-24 14:18:51  INFO   tg-mtproto-proxy  stats: total=50 active=1 ws=38 tcp_fb=0 bad=0 err=0 pool=28/38 up=265.8KB down=31.4MB | ws_bl: none
+2026-04-24 14:19:51  INFO   tg-mtproto-proxy  stats: total=50 active=1 ws=38 tcp_fb=0 bad=0 err=0 pool=28/38 up=266.7KB down=31.4MB | ws_bl: none
+2026-04-24 14:20:51  INFO   tg-mtproto-proxy  stats: total=50 active=1 ws=38 tcp_fb=0 bad=0 err=0 pool=28/38 up=267.4KB down=31.4MB | ws_bl: none
+2026-04-24 14:21:51  INFO   tg-mtproto-proxy  stats: total=50 active=1 ws=38 tcp_fb=0 bad=0 err=0 pool=28/38 up=267.6KB down=31.4MB | ws_bl: none
+2026-04-24 14:22:51  INFO   tg-mtproto-proxy  stats: total=50 active=1 ws=38 tcp_fb=0 bad=0 err=0 pool=28/38 up=268.4KB down=31.4MB | ws_bl: none
+2026-04-24 14:23:51  INFO   tg-mtproto-proxy  stats: total=50 active=1 ws=38 tcp_fb=0 bad=0 err=0 pool=28/38 up=269.1KB down=31.4MB | ws_bl: none
+2026-04-24 14:24:51  INFO   tg-mtproto-proxy  stats: total=50 active=1 ws=38 tcp_fb=0 bad=0 err=0 pool=28/38 up=270.3KB down=31.4MB | ws_bl: none
+2026-04-24 14:25:51  INFO   tg-mtproto-proxy  stats: total=50 active=1 ws=38 tcp_fb=0 bad=0 err=0 pool=28/38 up=271.1KB down=31.4MB | ws_bl: none
+2026-04-24 14:26:51  INFO   tg-mtproto-proxy  stats: total=50 active=1 ws=38 tcp_fb=0 bad=0 err=0 pool=28/38 up=271.5KB down=31.4MB | ws_bl: none
+2026-04-24 14:27:51  INFO   tg-mtproto-proxy  stats: total=50 active=1 ws=38 tcp_fb=0 bad=0 err=0 pool=28/38 up=272.2KB down=31.4MB | ws_bl: none
+2026-04-24 14:28:51  INFO   tg-mtproto-proxy  stats: total=50 active=1 ws=38 tcp_fb=0 bad=0 err=0 pool=28/38 up=272.4KB down=31.4MB | ws_bl: none

@@ -24,7 +24,6 @@ vim.opt.langmap =
 "йЙцЦуУкКеЕнНгГшШщЩзЗхХъЪфФыЫвВаАпПрРоОлЛдДжЖэЭяЯчЧсСмМиИтТьЬбБюЮ.\\,;qQwWeErRtTyYuUiIoOpP[{]}aAsSdDfFgGhHjJkKlL;:'\"zZxXcCvVbBnNmM\\,<.>/?"
 
 -- Сохранение при выходе из INSERT MODE
-
 vim.api.nvim_create_autocmd({ "InsertLeave", "BufLeave" }, {
     group = vim.api.nvim_create_augroup("IdeActions", { clear = true }),
     pattern = "*",
@@ -38,9 +37,6 @@ vim.api.nvim_create_autocmd({ "InsertLeave", "BufLeave" }, {
         end
     end,
 })
-
--- Предложенное ChatGPT (Проверить) --
-
 
 --  Отображение ошибок на строке (Virtual Text)
 vim.diagnostic.config({
@@ -59,4 +55,20 @@ vim.diagnostic.config({
         source = "if_many",
         severity_sort = true,
     },
+})
+-- Предложенное ChatGPT (Проверить) --
+
+-- Использование плагина vim-css-color для всех файлов
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+    pattern = "*",
+    callback = function()
+        local name = vim.fn.expand("%:t")
+        local ignore = { dunstrc = true, config = true, auth = true }
+
+        if vim.fn.expand("%:e") == "" and vim.bo.filetype == "" and not ignore[name] then
+            vim.bo.filetype = "xdefaults"
+            vim.cmd("runtime! after/syntax/css.vim")
+            pcall(vim.fn["css_color#init"])
+        end
+    end,
 })

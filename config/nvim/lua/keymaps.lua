@@ -68,12 +68,12 @@ vim.keymap.set('n', '<leader>ч', function() utils.jump_diagnostic(-1) end, { de
 
 -- Управление вкладками bufferline
 -- Переместиться влево [Shift + x]
-vim.keymap.set('n', 'H', ':BufferLineCyclePrev<CR>', { desc = 'Prev buffer' })
-vim.keymap.set('n', 'Р', ':BufferLineCyclePrev<CR>', { desc = 'Prev buffer' })
+vim.keymap.set('n', 'J', ':BufferLineCyclePrev<CR>', { desc = 'Prev buffer' })
+vim.keymap.set('n', 'О', ':BufferLineCyclePrev<CR>', { desc = 'Prev buffer' })
 
 -- Переместиться вправо [Shift + x]
-vim.keymap.set('n', 'L', ':BufferLineCycleNext<CR>', { desc = 'Next buffer' })
-vim.keymap.set('n', 'Д', ':BufferLineCycleNext<CR>', { desc = 'Next buffer' })
+vim.keymap.set('n', 'K', ':BufferLineCycleNext<CR>', { desc = 'Next buffer' })
+vim.keymap.set('n', 'Л', ':BufferLineCycleNext<CR>', { desc = 'Next buffer' })
 
 -- Закрыть вкладку [Shift + x]
 vim.keymap.set('n', 'X', utils.close_buffer_safely, { desc = 'Close buffer' })

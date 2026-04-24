@@ -1,0 +1,148 @@
+/* #ui */
+
+/* VARIABLES
+accent - #f67e6a
+background - #212121
+background-hover - #484641
+text-color - #a3ab87 // or foreground
+selected-text-color - #eaf4c1
+border- #484641
+*/
+
+.HUD,
+.HUD::after {
+  background: #212121 !important;
+  color: #a3ab87 !important;
+  border-radius: 0 !important;
+  font-size: 12px !important;
+  font-family: "Terminus", monospace !important;
+}
+
+/* Hint labels */
+.LH,
+.D > .LH {
+  background: #212121 !important;   
+  color: #f67e6a !important;        
+  border: 1px solid #f67e6a;
+  min-width: 20px;
+  text-align: center;
+  font-family: "Terminus", monospace !important;
+}
+
+
+/* #omni */
+
+#bar {
+  background: #212121 !important;
+  border: 1px solid #484641 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  font-family: "Terminus", monospace !important;
+}
+
+#input,
+#input * {
+  background: #212121 !important;
+  color: #a3ab87 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  font-size: 12px !important;
+  font-family: "Terminus", monospace !important;
+}
+
+#list {
+  background: #212121 !important;
+  font-family: "Terminus", monospace !important;
+}
+
+.item {
+  background: #212121 !important;
+  border-bottom: 1px solid #484641 !important;
+  border-radius: 0 !important;
+  color: #a3ab87 !important;
+  font-family: "Terminus", monospace !important;
+}
+
+.item:hover {
+  background: #484641 !important;
+}
+
+.item.s {
+  background: #f67e6a !important;
+  color: #a3ab87 !important;
+  border-radius: 0 !important;
+  font-family: "Terminus", monospace !important;
+}
+
+.item.s a {
+    color: #eaf4c1 !important;
+}
+
+/*Заголовки для выбранного item*/
+.item.s .top,
+.item.s .title
+{
+    color: #212121 !important;
+}
+
+/* Совпадающий текст в выбранных item */
+.item.s match
+{
+    color: #212121 !important;
+}
+
+.top,
+.title {
+  color: #f67e6a !important;
+  font-size: 12px !important;
+  font-family: "Terminus", monospace !important;
+}
+
+.top
+.icon {
+  display: none;
+}
+
+.bottom {
+  margin-left: 0;
+}
+
+.bottom,
+.bottom a {
+  color: #a3ab87 !important;
+  font-size: 12px !important;
+  font-family: "Terminus", monospace !important;
+}
+
+match {
+  color: #f67e6a !important;
+  font-weight: bold !important;
+  font-family: "Terminus", monospace !important;
+}
+
+/* #find */
+
+#find,
+#find * {
+  font-size: 12px !important;
+  border-radius: 0 !important;
+  font-family: "Terminus", monospace !important;
+}
+
+/* #find:host */
+
+:host,
+:host * {
+  font-size: 12px !important;
+  border-radius: 0 !important;
+  font-family: "Terminus", monospace !important;
+}
+
+/* #find:selection */
+
+::selection {
+  background: #212121 !important;
+  color: #f67e6a !important;
+  font-family: "Terminus", monospace !important;
+}

@@ -67,7 +67,7 @@ timeout = 8
 
 [urgency_critical]
 background = "${background}"
-frame_color = "${color9}"
+frame_color = "${color1}"
 highlight = "${color6}"
 timeout = 0
 

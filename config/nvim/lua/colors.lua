@@ -54,7 +54,7 @@ local function set_colors()
         ["@string"]   = { ctermfg = "cyan" },
         ["@constant"] = { ctermfg = "cyan" },
         ["@operator"] = { ctermfg = "magenta" },
-        ["@comment"]  = { ctermfg = "yellow", cterm = { italic = true } },
+        ["@comment"]  = { ctermfg = 8, cterm = { italic = true } },
     }
     for group, opts in pairs(ts) do hl(group, opts) end
 end
@@ -72,8 +72,8 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 -- Включаем визуальную линию
 vim.opt.cursorline = true
 
--- Настройка цветов для режима без termguicolors
--- 8  - обычно серый, 7 - белый, 0 - черный и т.д.
--- Попробуйте разные числа от 1 до 255, чтобы подобрать под ваш терминал
-vim.cmd('highlight NvimTreeCursorLine ctermbg=8 cterm=bold')
+-- Цвет линии курсора в nvim-tree
+vim.cmd('highlight NvimTreeCursorLine ctermbg=8') --cterm=bold'
+
+-- цвет линии курсора в коде
 vim.cmd('highlight CursorLine ctermbg=0')

@@ -111,9 +111,8 @@ packer.startup(function(use)
         config = function() require('plugins.autopairs') end,
     }
 
-
-    -- [AUTOPAIRS]
-    -- Автоматические скобки и ковычки
+    -- [CSS-COLOR]
+    -- Подсветка строчек с hex значениями цветов
     use {
         "ap/vim-css-color",
     }

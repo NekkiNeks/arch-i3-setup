@@ -33,22 +33,51 @@ local function custom_on_attach(bufnr)
     vim.keymap.set('n', '<Left>', '<Nop>', opts('Do Nothing'))
     vim.keymap.set('n', '<Right>', '<Nop>', opts('Do Nothing'))
 
+    -- Блокируем w и e
+    vim.keymap.set('n', 'w', '<Nop>', opts('Do Nothing'))
+    vim.keymap.set('n', 'ц', '<Nop>', opts('Do Nothing'))
+    vim.keymap.set('n', 'у', '<Nop>', opts('Do Nothing'))
+
     -- Блокируем пробел и backspace
     vim.keymap.set('n', '<BS>', '<Nop>', opts('Do Nothing'))
 end
 
+-- Файлы и папки которые по умолчанию не отображаются в nvim-tree
+local filtered_files_and_folders = { ".git", ".vscode", ".expo" }
 
 require("nvim-tree").setup({
 
     -- Функция которая выполняется при запуске. В ней можно определять хоткеи и другие настройки
     on_attach = custom_on_attach,
 
-    view = {
-        cursorline = true,
+    -- Фильтрация отображаемых папок и файлов
+    filters = {
+        custom = filtered_files_and_folders
     },
+
+    -- Отображение файлов в .gitignore
+    git = {
+        ignore = true,
+    },
+
+    -- Настройки вида
+    view = {
+        width = 45,
+        cursorline = true,
+        relativenumber = true,
+        signcolumn = "yes",
+    },
+
+    -- Настройки рендера
     renderer = {
         highlight_git = true,
 
+        -- Отрисовка иконок у файлов
+        icons = {
+            show = {
+                git = false,
+            },
+        },
         -- Отрисовка уровней вложенности
         indent_markers = {
             enable = true,
