@@ -4,7 +4,7 @@
 accent - ${color9}
 background - ${background}
 background-hover - ${color0}
-text-color - ${foreground} 
+text-color - ${color8} // or foreground
 selected-text-color - ${color15}
 border- ${color0}
 */
@@ -12,7 +12,7 @@ border- ${color0}
 .HUD,
 .HUD::after {
   background: ${background} !important;
-  color: ${foreground} !important;
+  color: ${color8} !important;
   border-radius: 0 !important;
   font-size: 12px !important;
   font-family: "Terminus", monospace !important;
@@ -43,7 +43,7 @@ border- ${color0}
 #input,
 #input * {
   background: ${background} !important;
-  color: ${foreground} !important;
+  color: ${color8} !important;
   border: none !important;
   border-radius: 0 !important;
   box-shadow: none !important;
@@ -60,7 +60,7 @@ border- ${color0}
   background: ${background} !important;
   border-bottom: 1px solid ${color0} !important;
   border-radius: 0 !important;
-  color: ${foreground} !important;
+  color: ${color8} !important;
   font-family: "Terminus", monospace !important;
 }
 
@@ -70,7 +70,7 @@ border- ${color0}
 
 .item.s {
   background: ${color9} !important;
-  color: ${foreground} !important;
+  color: ${color8} !important;
   border-radius: 0 !important;
   font-family: "Terminus", monospace !important;
 }
@@ -110,7 +110,7 @@ border- ${color0}
 
 .bottom,
 .bottom a {
-  color: ${foreground} !important;
+  color: ${color8} !important;
   font-size: 12px !important;
   font-family: "Terminus", monospace !important;
 }

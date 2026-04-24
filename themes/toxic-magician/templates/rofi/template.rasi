@@ -1,0 +1,25 @@
+configuration {
+font: "terminus 8";
+show-icons: false;
+drun-display-format: "> {name}";
+
+// конфигурация клавиш
+kb-row-up: "Up,Control+k,Control+Cyrillic_el"; // Перемещение вверх
+kb-row-down: "Down,Control+j,Control+Cyrillic_o"; // Перемещение вниз
+
+// Чтобы освободить необходимые клавиши нужно переназначить команды в которых они используются
+// "" - Не назначать ничего
+kb-accept-entry: "Return,KP_Enter"; // Выбрать
+kb-remove-to-eol: ""; // Удалить все после курсора в поле ввода
+}
+
+* {
+lightbg: ${background};
+background: ${background};
+lightfg: ${color9};
+foreground: ${foreground};
+}
+
+window {
+width: 40em;
+}

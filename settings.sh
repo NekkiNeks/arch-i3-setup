@@ -1,2 +1,2 @@
 #!/bin/bash
-git setting --global core.editor "vim"
+git setting --global core.editor "nvim"
