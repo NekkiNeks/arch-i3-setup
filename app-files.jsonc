@@ -1,0 +1,23 @@
+{
+    "apps": [
+        {
+            "name": "ghostty", 
+            "themedFiles": [
+                {
+                    "systemPath": "$SYSTEM_CONFIG/ghostty/themes/default",
+                    "externalPath": "$THEME_CONFIG/ghostty/themes/default"
+                },
+                {
+                    "systemPath": "$SYSTEM_CONFIG/ghostty/themes/template",
+                    "externalPath": "$THEME_CONFIG/ghostty/themes/template"
+                },
+            ],
+            "configFiles": [
+                {
+                    "systemPath": "$SYSTEM_CONFIG/ghostty/config.ghostty",
+                    "externalPath": "THEME_CONFIG/ghostty/config.ghostty"
+                }
+            ]
+        }
+    ]
+}
