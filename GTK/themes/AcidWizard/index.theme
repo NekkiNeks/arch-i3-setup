@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=GTK Theme
+Name=AcidWizzard
+Comment=Bonk colored theme.
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+Name=AcidWizzard
+GtkTheme=AcidWizzard
+
