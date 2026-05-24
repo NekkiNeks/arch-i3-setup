@@ -1,6 +1,9 @@
 
 ### CUSTOM PATH VARIABLES ###
 export PATH="$PATH:$HOME/.local/bin/"       # Папка .bin для хранения Appimage файлов
+export PATH="$PATH:$HOME/.local/bin/scripts"       # Папка .bin для хранения Appimage файлов
+
+source "$HOME/.profile"
 
 ### OTHER VARIABLES ###
 export EDITOR=nvim                          # Основной редактор текста
@@ -13,32 +16,70 @@ export PATH=$PATH:$GOPATH/bin               # чтобы установленн�
 export PATH=$PATH:/usr/local/go/bin         # Путь к основному бинарнику go
 
 ### NVM VARIABLES ###
-export NVM_DIR="$HOME/.nvm"
+export NVM_DIR="$XDG_DATA_HOME/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
 ### ANDROID STUDIO VARIABLES ###
-export ANDROID_HOME=$HOME/Android/Sdk
+export ANDROID_HOME=$HOME/Documents/utils/android-studio/sdk/
 export ANDROID_SDK_ROOT=$ANDROID_HOME
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$XDG_DATA_HOME/cargo/bin
 
 ### RUST VARIABLES ###
-source "$HOME/.cargo/env" # Подключение sh файла с переменными
+source "$HOME/.local/share/cargo/env" # Подключение sh файла с переменными
+
+### НАСТРОЙКА RUST ДЛЯ XTENZA (ESP И ARDUINO) ###
+if [ -f "$HOME/.local/share/esp-tools/export-esp.sh" ]; then
+    . "$HOME/.local/share/esp-tools/export-esp.sh" > /dev/null
+fi
 
 ### ALIASES ###
 alias gosleep='systemctl suspend'
 alias al='alacritty --working-directory "$PWD" &'
+alias jj='source joshuto_images'
 alias alac='alacritty --working-directory "$PWD" &'
 alias ar='alacritty --working-directory "$PWD" -e bash -c "ranger; exec bash" &'
+alias nvidia-settings='nvidia-settings --config="$XDG_CONFIG_HOME"/nvidia/settings' # clean-up alias
 #alias cp="cp -i"                          # confirm before overwriting something
 #alias df='df -h'                          # human-readable sizes
 #alias free='free -m'                      # show sizes in MB
 #alias np='nano -w PKGBUILD'
 #alias more=less
+
+### IMPORTS ###
+source "$HOME/.config/joshuto/open_current_folder.sh" # Для реализации "Открыть shell в текущей папке"
+# source "$HOME/.config/joshuto/open_current_folder.sh" # Для реализации превью
+
+### CLEAN-UP ###
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
+
+export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
+export PYENV_ROOT="$XDG_DATA_HOME/pyenv"
+export PLATFORMIO_HOME_DIR="$XDG_DATA_HOME/platformio"
+export GNUPGHOME="$XDG_DATA_HOME/gnupg"
+export TS3_CONFIG_DIR="$XDG_CONFIG_HOME/ts3client"
+export CRAWL_DIR="$XDG_DATA_HOME"/crawl/
+export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
+
+export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
+export SQLITE_HISTORY="$XDG_STATE_HOME"/sqlite_history
+export DOTNET_CLI_HOME="$XDG_DATA_HOME"/dotnet
+export XCURSOR_PATH=/usr/share/icons:$XDG_DATA_HOME/icons
+export PYTHON_HISTORY="$XDG_STATE_HOME"/python_history
+export PYTHONSTARTUP="$XDG_CONFIG_HOME"/python/pythonrc.py
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
+
+# TODO: update in i3-wizard to .local/share - themes, fonts, icons
+
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -117,6 +158,3 @@ shopt -s expand_aliases
 
 # Настройка для истории команд
 shopt -s histappend
-
-
-
