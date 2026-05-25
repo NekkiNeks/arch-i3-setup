@@ -10,8 +10,6 @@
 *.color8:       #373b41
 
 ! red
-!*.color1:       #44FF23
-!*.color9:       #45FF33
 *.color1:       #bb4040
 *.color9:       #ff4747
 

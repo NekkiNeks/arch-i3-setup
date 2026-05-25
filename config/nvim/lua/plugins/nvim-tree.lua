@@ -1,14 +1,20 @@
+-- [NVIM-TREE]
+-- Дерево файлов
+
 local api = require('nvim-tree.api')
+local utils = require('functions.utils')
+
 -- Функция для переключения фокуса между окном кода и деревом файлов
 local function toggle_tree_focus()
     if vim.bo.filetype == "NvimTree" then
         vim.cmd("wincmd p")
     else
+        utils.run_async(utils.save_and_format)
         api.tree.focus()
     end
 end
 
--- Кастомная функция которая в начале
+-- Кастомная функция которая срабатывает в начале
 local function custom_on_attach(bufnr)
     local function opts(desc)
         return { desc = 'nvim-tree: ' .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }

@@ -39,13 +39,8 @@ directories_first = true
 reverse = true
 
 [preview]
-preview_strategy = "auto"
 max_preview_size = "10MB"                           
-preview_method = "chafa"
-# preview_method = "ueberzugPP"
-preview_script = "/home/nekzie/.config/joshuto/preview-file.sh" # make sure it's marked as executable
-# preview_shown_hook_script = "/home/nekzie/.config/joshuto/on_preview_shown"
-# preview_removed_hook_script = "/home/nekzie/.config/joshuto/on_preview_removed"
+preview_script = "/home/nekzie/.config/joshuto/preview_file.sh" # make sure it's marked as executable
 
 [search]
 # insensitive, sensitive, smart

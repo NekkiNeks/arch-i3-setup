@@ -1,41 +1,49 @@
--- Список серверов
-local servers = {
-    "lua_ls",
+-- [LSP CONFIG]
+-- Прямая настройка и запуск LSP серверов (без циклов)
+
+--------------------------------------------
+-- 1. Серверы со специфичными настройками
+--------------------------------------------
+
+-- Lua
+vim.tbl_deep_extend("force", vim.lsp.config.lua_ls, {
+    settings = {
+        Lua = {
+            diagnostics = { globals = { "vim" } },
+            workspace = { checkThirdParty = false },
+        },
+    },
+})
+vim.lsp.enable("lua_ls")
+
+-- CSS
+vim.tbl_deep_extend("force", vim.lsp.config.cssls, {
+    settings = {
+        css = { validate = true },
+        less = { validate = true },
+        scss = { validate = true },
+    },
+})
+vim.lsp.enable("cssls")
+
+-- Clangd
+vim.tbl_deep_extend("force", vim.lsp.config.clangd, {
+    cmd = { "--background-index" },
+})
+vim.lsp.enable("clangd")
+
+--------------------------------------------
+-- 2. Серверы со стандартными настройками
+--------------------------------------------
+local default_servers = {
     "ts_ls",
-    "clangd",
     "pyright",
     "bashls",
     "gopls",
     "rust_analyzer",
     "html",
-    "cssls",
 }
 
-for _, name in ipairs(servers) do
-    -- Получаем доступ к объекту конфигурации
-    local config = vim.lsp.config[name]
-
-    if config then
-        -- Если нужно добавить специфичные настройки (settings)
-        if name == "lua_ls" then
-            config.settings = vim.tbl_deep_extend("force", config.settings or {}, {
-                Lua = {
-                    diagnostics = { globals = { "vim" } },
-                    workspace = { checkThirdParty = false },
-                },
-            })
-        elseif name == "cssls" then
-            config.settings = vim.tbl_deep_extend("force", config.settings or {}, {
-                css = { validate = true },
-                less = { validate = true },
-                scss = { validate = true },
-            })
-        end
-
-        -- Включаем сервер (в 0.11 передается только имя)
-        vim.lsp.enable(name)
-    else
-        -- На всякий случай выведем предупреждение, если сервер не найден в реестре
-        vim.notify("LSP: Server " .. name .. " not found in vim.lsp.config", vim.log.levels.WARN)
-    end
+for _, name in ipairs(default_servers) do
+    vim.lsp.enable(name)
 end

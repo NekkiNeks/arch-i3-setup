@@ -1,3 +1,6 @@
+-- [BUFFERLINE]
+-- Вкладки с открытыми файлами
+
 require("bufferline").setup({
     options = {
         mode = "buffers",

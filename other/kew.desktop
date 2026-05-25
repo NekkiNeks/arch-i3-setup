@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Kew
 Comment=Terminal music player
-Exec=alacritty -e kew
+Exec=ghostty -e kew
 Icon=audio-x-generic
 Terminal=false
 Type=Application

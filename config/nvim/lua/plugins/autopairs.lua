@@ -1,3 +1,6 @@
+-- [AUTOPAIRS]
+-- Автоматические скобки и ковычки
+
 local cmp_autopairs = require("nvim-autopairs.completion.cmp")
 local cmp = require("cmp")
 

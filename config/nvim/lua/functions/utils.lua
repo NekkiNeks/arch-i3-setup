@@ -17,13 +17,14 @@ M.save_file = function()
     end
     -- silent! чтобы не ругался в лог, если сохранять нельзя (например, в дереве)
     vim.cmd("silent! write")
+    vim.notify("[S]", vim.log.levels.INFO)
 end
 
 -- Сохранить и Форматировать (использует функции выше)
 M.save_and_format = function()
     M.format_code() -- Сначала причесываем
     M.save_file()   -- Затем сохраняем
-    vim.notify("Document has been formatted and saved!", vim.log.levels.INFO)
+    vim.notify("[S&F]", vim.log.levels.INFO)
 end
 
 -- Показ документации
@@ -109,5 +110,72 @@ M.close_buffer_safely = function()
         vim.cmd("bd!")
     end
 end
+
+-- Запуск в отдельном "потоке"
+M.run_async = function(cb)
+    vim.schedule(function()
+        cb()
+    end)
+end
+
+-- Проверка на гласную
+M.is_vowel = function(c)
+    return c:lower():match("[aeiou]") ~= nil
+end
+
+-- Проверка на согласную
+M.is_consonant = function(c)
+    return c:lower():match("%a") and not M.is_vowel(c)
+end
+
+-- Убрать все гласные из слова и сократить его
+M.remove_vowels = function(word)
+    if type(word) ~= "string" then
+        return "***"
+    end
+
+    local res = ""
+
+    for i = 1, #word do
+        local symbol = word:sub(i, i)
+
+        -- Если символ согласный, то добавить его в результат
+        if M.is_consonant(symbol) then
+            res = res .. symbol
+        end
+    end
+
+    return res
+end
+
+-- Вывод дебага в лог файл
+M.debug_log = function(data, raw)
+    local path = "/home/nekzie/.config/nvim/debug.log"
+
+    local log = io.open(path, "a")
+
+    if not log then
+        -- попытка создать файл вручную и открыть снова
+        vim.fn.mkdir(vim.fn.fnamemodify(path, ":h"), "p")
+        log = io.open(path, "a")
+
+        if not log then
+            return
+        end
+    end
+
+    -- Если передан второй аргумент, то печатается то что передано
+    local data_to_print
+    if raw then
+        data_to_print = tostring(data)
+    else
+        data_to_print = vim.inspect(data)
+    end
+
+    log:write(data_to_print .. "\n")
+    log:flush()
+    log:close()
+end
+
 
 return M

@@ -6,6 +6,7 @@ exec_always --no-startup-id xrandr --output DP-2 --mode 1920x1080 --pos 0x0 --ou
 # pactl pulseaudio
 set $refresh_i3status killall -SIGUSR1 i3status
 
+
 # directions
 set $up k
 set $down j
@@ -30,10 +31,10 @@ set $ws9 "9"
 set $ws10 "10"
 
 # Run app in floating terminal
-set $term_float alacritty --class floating_shell -o window.dimensions.columns=82 -o window.dimensions.lines=25 -e
+set $term_float ghostty --class floating_shell -o window.dimensions.columns=82 -o window.dimensions.lines=25 -e
 
 # Run app in terminal
-set $term alacritty -e
+set $term ghostty -e
 
 # Connect all modules
 include ~/.config/i3/config.d/*.conf

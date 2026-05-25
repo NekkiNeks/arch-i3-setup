@@ -1,3 +1,7 @@
+-- Вроде как лишний конфиг, плагина для него нет...
+
+
+
 -- Выключаем termguicolors, чтобы тема Xresources жила
 vim.opt.termguicolors = false
 

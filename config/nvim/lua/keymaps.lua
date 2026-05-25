@@ -1,3 +1,6 @@
+-- [KEYMAPS.LUA]
+-- Основной файл настройки сочетаний клавиш и горячих клавиш в целом.
+
 local opts = { noremap = true, silent = true }
 local utils = require("functions/utils")
 local toggle_tree_focus = require("plugins.nvim-tree")

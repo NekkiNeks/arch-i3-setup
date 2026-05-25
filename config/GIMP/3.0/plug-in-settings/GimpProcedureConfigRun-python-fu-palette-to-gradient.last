@@ -1,0 +1,6 @@
+# settings
+
+(run-mode interactive)
+(palette "GimpPalette" "toxicMagicianDark16" "${gimp_dir}/palettes/Без-имени.gpl")
+
+# end of settings

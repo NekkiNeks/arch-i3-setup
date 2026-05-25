@@ -40,10 +40,9 @@ fi
 
 ### ALIASES ###
 alias gosleep='systemctl suspend'
-alias al='alacritty --working-directory "$PWD" &'
-alias jj='source joshuto_images'
-alias alac='alacritty --working-directory "$PWD" &'
-alias ar='alacritty --working-directory "$PWD" -e bash -c "ranger; exec bash" &'
+alias tt="ghostty --working-directory=\"\$PWD\" >/dev/null 2>&1 &"
+alias tj='ghostty --working-directory="$PWD" --command="bash -c \"joshuto; exec bash\"" >/dev/null 2>&1 &'
+alias jj='joshuto'
 alias nvidia-settings='nvidia-settings --config="$XDG_CONFIG_HOME"/nvidia/settings' # clean-up alias
 #alias cp="cp -i"                          # confirm before overwriting something
 #alias df='df -h'                          # human-readable sizes

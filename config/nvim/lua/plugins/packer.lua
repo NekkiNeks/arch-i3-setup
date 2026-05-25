@@ -1,3 +1,6 @@
+-- [PACKER]
+-- Менеджер плагинов.
+
 -- Обьявление переменных
 local fn = vim.fn
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
@@ -88,7 +91,9 @@ packer.startup(function(use)
         config = function() require('plugins.mason') end,
     }
 
-    use 'williamboman/mason-lspconfig.nvim' -- интеграция mason + lspconfig
+    -- [MASON-LSP]
+    -- Мост между mason и lspconfig, который позволяет им взаимодействовать
+    use 'williamboman/mason-lspconfig.nvim'
 
     -- [COMMENT]
     -- быстрые комментарии
@@ -129,6 +134,13 @@ packer.startup(function(use)
     use {
         'akinsho/bufferline.nvim',
         config = function() require("plugins.bufferline") end,
+    }
+
+    -- [TINYGO_NVIM]
+    -- Плагин для TinyGo, Go для embedded разработки. Для neovim.
+    use {
+        "pcolladosoto/tinygo.nvim",
+        config = function() require("tinygo").setup({}) end
     }
     -- Можно добавить сюда другие плагины
 end)

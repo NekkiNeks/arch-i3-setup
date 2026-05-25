@@ -1,7 +1,13 @@
+-- [CONFIG.LUA]
+-- Основной файл конфигурации редактора
+
 local utils = require("functions/utils")
 -- Включить нумерацию строк
 vim.o.number = true
 vim.o.relativenumber = true
+
+-- Включить поддержку локальных конфигов в проектах
+vim.o.exrc = true
 
 -- Настройки табуляции
 vim.o.tabstop = 4
@@ -14,7 +20,6 @@ vim.o.termguicolors = false
 -- Использование системного буфера
 vim.opt.clipboard = "unnamedplus"
 
-
 -- Время задержки времени для того чтобы понять будет ли
 -- нажата еще какая нибудь кнопка после Пробела так как он Leader
 vim.o.timeoutlen = 500 -- Время ожидания команды в миллисекундах
@@ -23,27 +28,13 @@ vim.o.timeoutlen = 500 -- Время ожидания команды в милл
 vim.opt.langmap =
 "йЙцЦуУкКеЕнНгГшШщЩзЗхХъЪфФыЫвВаАпПрРоОлЛдДжЖэЭяЯчЧсСмМиИтТьЬбБюЮ.\\,;qQwWeErRtTyYuUiIoOpP[{]}aAsSdDfFgGhHjJkKlL;:'\"zZxXcCvVbBnNmM\\,<.>/?"
 
--- Сохранение при выходе из INSERT MODE
-vim.api.nvim_create_autocmd({ "InsertLeave", "BufLeave" }, {
-    group = vim.api.nvim_create_augroup("IdeActions", { clear = true }),
-    pattern = "*",
-    callback = function()
-        -- Сохраняем ТОЛЬКО если:
-        -- 1. Файл изменен (modified)
-        -- 2. Это обычный файл (не дерево, не терминал)
-        -- 3. Файл можно редактировать (modifiable)
-        if vim.bo.modified and vim.bo.buftype == "" and vim.bo.modifiable then
-            utils.save_and_format()
-        end
-    end,
-})
 
 --  Отображение ошибок на строке (Virtual Text)
 vim.diagnostic.config({
-    -- virtual_text = {
-    --     prefix = '●', -- Символ перед текстом ошибки
-    --     source = "always", -- Показывать, какой именно LSP выдал ошибку
-    -- },
+    virtual_text = {
+        prefix = '●', -- Символ перед текстом ошибки
+        -- source = "always", -- Показывать, какой именно LSP выдал ошибку
+    },
     virtual_text = true, -- Подскахки на строке
     signs = true,        -- Значки на полях
     underline = true,
@@ -56,7 +47,6 @@ vim.diagnostic.config({
         severity_sort = true,
     },
 })
--- Предложенное ChatGPT (Проверить) --
 
 -- Использование плагина vim-css-color для всех файлов
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
@@ -69,6 +59,22 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
             vim.bo.filetype = "xdefaults"
             vim.cmd("runtime! after/syntax/css.vim")
             pcall(vim.fn["css_color#init"])
+        end
+    end,
+})
+
+-- Сохранение при выходе из INSERT MODE (Отключил так как не совсем удобно)
+vim.api.nvim_create_autocmd({ "InsertLeave", "BufLeave" }, {
+    group = vim.api.nvim_create_augroup("IdeActions", { clear = true }),
+    pattern = "*",
+    callback = function()
+        -- Сохраняем ТОЛЬКО если:
+        -- 1. Файл изменен (modified)
+        -- 2. Это обычный файл (не дерево, не терминал)
+        -- 3. Файл можно редактировать (modifiable)
+        if vim.bo.modified and vim.bo.buftype == "" and vim.bo.modifiable then
+            -- utils.save_and_format() -- Убрал так как не совсем удобно..
+            utils.save_file()
         end
     end,
 })

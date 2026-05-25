@@ -11,19 +11,19 @@
     (size 640 480))
 (session-info "toplevel"
     (factory-entry "gimp-single-image-window")
-    (position 20 64)
-    (size 1880 996)
+    (position 10 36)
+    (size 1898 1032)
     (open-on-exit)
     (aux-info
         (left-docks-width "66")
         (right-docks-width "443")
-        (maximized "no"))
+        (maximized "yes"))
     (gimp-toolbox
         (side left))
     (gimp-dock
         (side right)
         (book
-            (current-page 0)
+            (current-page 2)
             (dockable "gimp-tool-options"
                 (locked)
                 (tab-style icon)
@@ -44,9 +44,30 @@
             (dockable "gimp-gradient-list"
                 (tab-style preview)
                 (aux-info
-                    (show-button-bar "true"))))
+                    (show-button-bar "true")))
+            (dockable "gimp-selection-editor"
+                (tab-style icon)
+                (aux-info
+                    (show-button-bar "true")))
+            (dockable "gimp-gradient-editor"
+                (tab-style icon)
+                (aux-info
+                    (show-button-bar "true")
+                    (edit-active "true")
+                    (current-data "toxicMagicianDark16")))
+            (dockable "gimp-palette-list"
+                (tab-style preview)
+                (aux-info
+                    (show-button-bar "true")))
+            (dockable "gimp-palette-editor"
+                (tab-style icon)
+                (aux-info
+                    (show-button-bar "true")
+                    (edit-active "true")
+                    (current-data "toxicMagicianDark16")
+                    (zoom-factor "2.30"))))
         (book
-            (position 671)
+            (position 599)
             (current-page 0)
             (dockable "gimp-layer-list"
                 (tab-style icon)
@@ -83,24 +104,28 @@
     (size 562 606))
 (session-info "toplevel"
     (factory-entry "gimp-file-export-dialog")
-    (position 514 271)
-    (size 891 581))
+    (position 506 263)
+    (size 851 558))
 (session-info "toplevel"
     (factory-entry "gimp-keyboard-shortcuts-dialog")
     (position 2092 602)
     (size 1417 1416))
 (session-info "toplevel"
     (factory-entry "gimp-file-open-dialog")
-    (position 1257 32)
-    (size 1688 1197))
+    (position 227 120)
+    (size 1469 855))
 (session-info "toplevel"
     (factory-entry "gimp-brightness-contrast-tool-dialog")
     (position 91 439)
     (monitor 1))
 (session-info "toplevel"
     (factory-entry "gimp-file-save-dialog")
-    (position 631 230)
-    (size 891 642))
+    (position 630 229)
+    (size 891 642)
+    (monitor 1))
+(session-info "toplevel"
+    (factory-entry "gimp-palette-editor-color-dialog")
+    (position 1205 184))
 
 (hide-docks no)
 (single-window-mode yes)

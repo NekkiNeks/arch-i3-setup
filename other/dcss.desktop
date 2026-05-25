@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Dungeon Crawl Stone Soup
+Exec=/home/nekzie/.local/bin/dcss.AppImage
+Icon=dcss
+Type=Application
+Categories=Game;

@@ -1,3 +1,6 @@
+-- [COLORS.LUA]
+-- Файл для настройки цветов в подсветке синтаксиса и не только.
+
 local function set_colors()
     -- Помощник для установки цветов
     local hl = function(group, opts)

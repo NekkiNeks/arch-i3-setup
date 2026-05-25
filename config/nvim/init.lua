@@ -1,3 +1,8 @@
+if vim.g.vscode then
+    require("vscode-config")
+    return
+end
+
 require("plugins.packer")
 require("config")
 require("keymaps")

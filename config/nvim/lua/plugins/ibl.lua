@@ -1,3 +1,6 @@
+-- [INDENT BLANKLINE]
+-- Вертикальные линии для областей видимости
+
 -- Настройки для вертикальных черточек из ibl-плагина
 vim.api.nvim_set_hl(0, "MyIndentLine", { ctermfg = 8 })
 vim.api.nvim_set_hl(0, "MyIndentScope", { ctermfg = 8 })
