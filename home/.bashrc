@@ -42,17 +42,13 @@ fi
 alias gosleep='systemctl suspend'
 alias tt="ghostty --working-directory=\"\$PWD\" >/dev/null 2>&1 &"
 alias tj='ghostty --working-directory="$PWD" --command="bash -c \"joshuto; exec bash\"" >/dev/null 2>&1 &'
-alias jj='joshuto'
+alias jj='source joshuto-wrapper'
 alias nvidia-settings='nvidia-settings --config="$XDG_CONFIG_HOME"/nvidia/settings' # clean-up alias
 #alias cp="cp -i"                          # confirm before overwriting something
 #alias df='df -h'                          # human-readable sizes
 #alias free='free -m'                      # show sizes in MB
 #alias np='nano -w PKGBUILD'
 #alias more=less
-
-### IMPORTS ###
-source "$HOME/.config/joshuto/open_current_folder.sh" # Для реализации "Открыть shell в текущей папке"
-# source "$HOME/.config/joshuto/open_current_folder.sh" # Для реализации превью
 
 ### CLEAN-UP ###
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -98,9 +94,18 @@ export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
 
 # 1. Библиотека цветов (Палитра)
 COLOR_DEFAULT='\[\e[0m\]'
-COLOR_GREEN='\[\e[38;5;10m\]'   # Салатовый
-COLOR_CYAN='\[\e[38;5;6m\]'   # Бирюзовый
 COLOR_RED='\[\e[38;5;1m\]'    # Красный
+COLOR_RED_LIGHT='\[\e[38;5;9m\]'    # Красный
+COLOR_GREEN='\[\e[38;5;2m\]'   # Салатовый
+COLOR_GREEN_LIGHT='\[\e[38;5;10m\]'   # Салатовый
+COLOR_YELLOW='\[\e[38;5;3m\]'   # Бирюзовый
+COLOR_YELLOW_LIGHT='\[\e[38;5;11m\]'   # Бирюзовый
+COLOR_BLUE='\[\e[38;5;4m\]'   # Бирюзовый
+COLOR_BLUE_LIGHT='\[\e[38;5;12m\]'   # Бирюзовый
+COLOR_MAGENTA='\[\e[38;5;5m\]'   # Фиолетовый
+COLOR_MAGENTA_LIGHT='\[\e[38;5;13m\]'   # Фиолетовый
+COLOR_CYAN='\[\e[38;5;6m\]'   # Бирюзовый
+COLOR_CYAN_LIGHT='\[\e[38;5;14m\]'   # Бирюзовый
 DIM='\[\e[2m\]'
 
 # Вес шрифта
@@ -130,7 +135,7 @@ shSymbol="☵"
 # 4. Применение PS1
 case ${TERM} in
     xterm*|rxvt*|alacritty*|gnome*|konsole*|linux)
-        export PS1="${BOLD}${MAIN_COLOR}${sqrBrOpen}${username}${atSymbol}${pcName}${twoDots} ${SECOND_COLOR}${DIM}${relPath}${BOLD}${MAIN_COLOR}${sqrBrClose}${shSymbol}${SECOND_COLOR} "
+        export PS1="${BOLD}${COLOR_MAGENTA_LIGHT}${sqrBrOpen}${COLOR_GREEN_LIGHT}${username}${COLOR_BLUE_LIGHT}${atSymbol}${COLOR_RED_LIGHT}${pcName}${twoDots} ${SECOND_COLOR}${DIM}${relPath}${RESET}${BOLD}${COLOR_MAGENTA_LIGHT}${sqrBrClose}${shSymbol}${SECOND_COLOR} "
         ;;
     *)
         export PS1="[\u@\h: \w]\$ "

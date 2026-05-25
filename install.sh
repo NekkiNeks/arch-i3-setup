@@ -110,6 +110,11 @@ if [ -d "./home" ]; then
     ( shopt -s dotglob; cp -rf ./home/* ~/ )
 fi
 
+# 11.1 Копирование local/bin
+echo "💽 Копирование bin файлов в .local/bin"
+mkdir -p "$HOME/.local/bin"
+cp -rf bin/* "$HOME/.local/bin/"
+
 # 12. Настройка Login Manager (ly)
 echo "🖥️  Настройка экрана входа..."
 sudo systemctl disable gdm lightdm sddm sgbm 2>/dev/null || true

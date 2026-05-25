@@ -1,34 +1,47 @@
 #!/usr/bin/env bash
+# vim: set filetype=sh :
 
-#!/usr/bin/env bash
-echo "Хук вызван в $(date) для файла $1\n\n" >> /tmp/joshuto_test.log
+# 1. Дефолтные значения для аргументов
+FILE_PATH="${1}"
+PREVIEW_X_COORD="${2:-0}"
+PREVIEW_Y_COORD="${3:-0}"
+PREVIEW_WIDTH="${4:-10}"
+PREVIEW_HEIGHT="${5:-10}"
 
-FILE_PATH="$1"			# Full path of the previewed file
-PREVIEW_X_COORD="$2"		# x coordinate of upper left cell of preview area
-PREVIEW_Y_COORD="$3"		# y coordinate of upper left cell of preview area
-PREVIEW_WIDTH="$4"		# Width of the preview pane (number of fitting characters)
-PREVIEW_HEIGHT="$5"		# Height of the preview pane (number of fitting characters)
+META_FILE=$(get_preview_meta_file "$FILE_PATH")
 
-mimetype=$(file --mime-type -Lb "$FILE_PATH")
-extension=$(/bin/echo "${FILE_PATH##*.}" | awk '{print tolower($0)}')
+get_data_from_meta_file() {
+    local key_name=$1
+    local data=""
 
-function image {
-	kitty +kitten icat \
-		--transfer-mode=file \
-		--clear 2>/dev/null
-	kitty +kitten icat \
-		--transfer-mode=file \
-		--place "${PREVIEW_WIDTH}x${PREVIEW_HEIGHT}@${PREVIEW_X_COORD}x${PREVIEW_Y_COORD}" \
-		"$1" 2>/dev/null
+    if [ -f "$META_FILE" ]; then
+        data=$(grep "$key_name" "$META_FILE" | awk '{print $2}')
+    fi
+
+    echo "$data"
 }
 
-case "$mimetype" in
-	image/*)
-		image "${FILE_PATH}"
-		;;
-	*)
-		kitty +kitten icat \
-			--transfer-mode=file \
-			--clear 2>/dev/null
-		;;
-esac
+HANDLE_DATA=$(get_data_from_meta_file "handle_data")
+FILE_TYPE=$(get_data_from_meta_file "file_type")
+
+if [ "$HANDLE_DATA" != "true" ]; then
+    remove_image
+    exit 1 
+fi
+
+if [ "$FILE_TYPE" = "image" ]; then
+    # Читаем сохраненный сдвиг из мета-файла
+    Y_OFFSET=$(get_data_from_meta_file "y_offset")
+    PREVIEW_Y_COORD=$((PREVIEW_Y_COORD + ${Y_OFFSET:-0}))
+
+    show_image "$FILE_PATH" "$PREVIEW_X_COORD" "$PREVIEW_Y_COORD" "$PREVIEW_WIDTH" "$PREVIEW_HEIGHT"
+elif [ "$FILE_TYPE" = "pdf" ]; then
+    ## todo: Добавить отрисовку
+    true
+elif [ "$FILE_TYPE" = "book" ]; then
+    ## todo: Добавить отрисовку
+    true
+else
+    remove_image
+fi 
+
